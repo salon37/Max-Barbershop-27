@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <title><data:blog.pageTitle/></title>
+  <meta name="description" expr:content="data:blog.metaDescription"/>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  
+  <b:skin><![CDATA[
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+    
+    /* Header Styles */
+    .header-wrapper {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #e74c3c;
+      text-decoration: none;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+    
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-menu a:hover {
+      color: #e74c3c;
+    }
+    
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #e74c3c;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 80px;
+    }
+    
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: #e74c3c;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    }
+    
+    .cta-button:hover {
+      background: #c0392b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    }
+    
+    /* About Section */
+    .about-section {
+      padding: 100px 0;
+      background: white;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #2c3e50;
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 3px;
+      background: #e74c3c;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .about-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+    
+    .about-image {
+      text-align: center;
+    }
+    
+    .about-image img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    /* Services Section */
+    .services-section {
+      padding: 100px 0;
+      background: #f8f9fa;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .service-icon {
+      font-size: 3rem;
+      color: #e74c3c;
+      margin-bottom: 1rem;
+    }
+    
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+    
+    /* Team Section */
+    .team-section {
+      padding: 100px 0;
+      background: white;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .team-member {
+      text-align: center;
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+    
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 5px solid #e74c3c;
+    }
+    
+    .team-member h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+    
+    .team-member p {
+      color: #666;
+      font-style: italic;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      padding: 100px 0;
+      background: #2c3e50;
+      color: white;
+    }
+    
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+    
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #e74c3c;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-item i {
+      font-size: 1.5rem;
+      color: #e74c3c;
+      margin-right: 1rem;
+      width: 30px;
+    }
+    
+    .opening-hours {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 15px;
+    }
+    
+    .opening-hours h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #e74c3c;
+    }
+    
+    .hours-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* Footer */
+    .footer {
+      background: #1a252f;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    .social-links {
+      margin-bottom: 1rem;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      color: #e74c3c;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+      
+      .about-content,
+      .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+    
+    /* Blog Posts Styling */
+    .blog-posts {
+      padding: 50px 0;
+    }
+    
+    .post {
+      background: white;
+      margin-bottom: 2rem;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+    
+    .post-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .post-title a:hover {
+      color: #e74c3c;
+    }
+    
+    .post-body {
+      padding: 2rem;
+    }
+    
+    .post-footer {
+      padding: 1rem 2rem;
+      background: #f8f9fa;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  ]]></b:skin>
+  
+  <b:defaultmarkups>
+    <b:defaultmarkup type='Common'>
+      <b:includable id='main' var='this'>
+        <!-- Main content will be handled by sections -->
+      </b:includable>
+    </b:defaultmarkup>
+  </b:defaultmarkups>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class='header-wrapper'>
+    <div class='header-container'>
+      <a href='/' class='logo'>Salon Menissa</a>
+      <nav>
+        <ul class='nav-menu'>
+          <li><a href='#home'>الرئيسية</a></li>
+          <li><a href='#about'>من نحن</a></li>
+          <li><a href='#services'>خدماتنا</a></li>
+          <li><a href='#team'>فريقنا</a></li>
+          <li><a href='#contact'>اتصل بنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id='home' class='hero-section'>
+    <div class='hero-content'>
+      <h1>مرحباً بكم في صالون مينيسا</h1>
+      <p>خبرة احترافية في عالم الجمال والأناقة منذ سنوات</p>
+      <a href='#contact' class='cta-button'>احجز موعدك الآن</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id='about' class='about-section'>
+    <div class='container'>
+      <h2 class='section-title'>من نحن</h2>
+      <div class='about-content'>
+        <div class='about-text'>
+          <h3>صالون مينيسا للجمال</h3>
+          <p>نحن في صالون مينيسا نؤمن بأن الجمال هو انعكاس للثقة بالنفس. منذ تأسيسنا، كرسنا جهودنا لتقديم أفضل خدمات التجميل والعناية بالشعر باستخدام أحدث التقنيات والمنتجات عالية الجودة.</p>
+          <p>فريقنا المتخصص من خبراء التجميل والمصففين المحترفين يعمل بشغف لضمان حصولكم على تجربة استثنائية تفوق توقعاتكم.</p>
+          <p>نحن نقدم بيئة مريحة وراقية حيث يمكنكم الاسترخاء والاستمتاع بلحظات من الهدوء والعناية الفائقة.</p>
+        </div>
+        <div class='about-image'>
+          <img src='https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80' alt='صالون مينيسا'/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id='services' class='services-section'>
+    <div class='container'>
+      <h2 class='section-title'>خدماتنا</h2>
+      <div class='services-grid'>
+        <div class='service-card'>
+          <div class='service-icon'>
+            <i class='fas fa-cut'></i>
+          </div>
+          <h3>قص وتصفيف الشعر</h3>
+          <p>قصات عصرية وتصفيف احترافي يناسب شكل وجهك وشخصيتك الفريدة</p>
+        </div>
+        <div class='service-card'>
+          <div class='service-icon'>
+            <i class='fas fa-palette'></i>
+          </div>
+          <h3>صبغ وتلوين</h3>
+          <p>أحدث تقنيات الصبغ والتلوين باستخدام منتجات طبيعية آمنة</p>
+        </div>
+        <div class='service-card'>
+          <div class='service-icon'>
+            <i class='fas fa-spa'></i>
+          </div>
+          <h3>علاجات الشعر</h3>
+          <p>علاجات مكثفة لترطيب وتغذية الشعر واستعادة حيويته الطبيعية</p>
+        </div>
+        <div class='service-card'>
+          <div class='service-icon'>
+            <i class='fas fa-crown'></i>
+          </div>
+          <h3>تسريحات المناسبات</h3>
+          <p>تسريحات أنيقة للمناسبات الخاصة والأفراح والحفلات</p>
+        </div>
+        <div class='service-card'>
+          <div class='service-icon'>
+            <i class='fas fa-hand-sparkles'></i>
+          </div>
+          <h3>العناية بالأظافر</h3>
+          <p>مانيكير وبديكير احترافي للحصول على أظافر جميلة وصحية</p>
+        </div>
+        <div class='service-card'>
+          <div class='service-icon'>
+            <i class='fas fa-eye'></i>
+          </div>
+          <h3>تجميل الحواجب</h3>
+          <p>تشكيل وتجميل الحواجب بأحدث التقنيات للحصول على مظهر طبيعي</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id='team' class='team-section'>
+    <div class='container'>
+      <h2 class='section-title'>فريقنا المتميز</h2>
+      <div class='team-grid'>
+        <div class='team-member'>
+          <img src='https://images.unsplash.com/photo-1594824388853-d0c8b2c1f7b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80' alt='مينيسا - المديرة العامة'/>
+          <h3>مينيسا</h3>
+          <p>المديرة العامة ومصففة شعر محترفة</p>
+        </div>
+        <div class='team-member'>
+          <img src='https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80' alt='سارة - خبيرة تجميل'/>
+          <h3>سارة</h3>
+          <p>خبيرة تجميل ومتخصصة في العناية بالبشرة</p>
+        </div>
+        <div class='team-member'>
+          <img src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80' alt='نور - مصففة شعر'/>
+          <h3>نور</h3>
+          <p>مصففة شعر ومتخصصة في التسريحات العصرية</p>
+        </div>
+        <div class='team-member'>
+          <img src='https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80' alt='ليلى - خبيرة أظافر'/>
+          <h3>ليلى</h3>
+          <p>خبيرة في العناية بالأظافر والمانيكير</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id='contact' class='contact-section'>
+    <div class='container'>
+      <h2 class='section-title' style='color: white;'>اتصل بنا</h2>
+      <div class='contact-content'>
+        <div class='contact-info'>
+          <h3>معلومات الاتصال</h3>
+          <div class='contact-item'>
+            <i class='fas fa-phone'></i>
+            <span>+49 123 456 7890</span>
+          </div>
+          <div class='contact-item'>
+            <i class='fas fa-envelope'></i>
+            <span>info@salonmenissa.de</span>
+          </div>
+          <div class='contact-item'>
+            <i class='fas fa-map-marker-alt'></i>
+            <span>شارع الجمال 123، برلين، ألمانيا</span>
+          </div>
+          <div class='contact-item'>
+            <i class='fas fa-globe'></i>
+            <span>www.salonmenissa.de</span>
+          </div>
+        </div>
+        <div class='opening-hours'>
+          <h3>ساعات العمل</h3>
+          <div class='hours-item'>
+            <span>الإثنين</span>
+            <span>مغلق</span>
+          </div>
+          <div class='hours-item'>
+            <span>الثلاثاء - الجمعة</span>
+            <span>09:00 - 19:00</span>
+          </div>
+          <div class='hours-item'>
+            <span>السبت</span>
+            <span>08:00 - 17:00</span>
+          </div>
+          <div class='hours-item'>
+            <span>الأحد</span>
+            <span>10:00 - 16:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Section -->
+  <b:section class='main' id='main' maxwidgets='1' showaddelement='no'>
+    <b:widget id='Blog1' locked='true' title='مقالات الجمال' type='Blog' version='1' visible='true'>
+      <b:widget-settings>
+        <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+        <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+        <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'>
+        <div class='blog-posts container'>
+          <b:loop values='data:posts' var='post'>
+            <article class='post'>
+              <div class='post-body'>
+                <h2 class='post-title'>
+                  <a expr:href='data:post.link'><data:post.title/></a>
+                </h2>
+                <div class='post-content'>
+                  <data:post.body/>
+                </div>
+              </div>
+              <footer class='post-footer'>
+                <span class='post-author'>بواسطة: <data:post.author/></span>
+                <span class='post-date'> | <data:post.date/></span>
+              </footer>
+            </article>
+          </b:loop>
+        </div>
+      </b:includable>
+    </b:widget>
+  </b:section>
+
+  <!-- Footer -->
+  <footer class='footer'>
+    <div class='container'>
+      <div class='social-links'>
+        <a href='#'><i class='fab fa-facebook'></i></a>
+        <a href='#'><i class='fab fa-instagram'></i></a>
+        <a href='#'><i class='fab fa-twitter'></i></a>
+        <a href='#'><i class='fab fa-whatsapp'></i></a>
+      </div>
+      <p>&copy; 2024 صالون مينيسا. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <!-- Smooth Scrolling Script -->
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll effect to header
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header-wrapper');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(44, 62, 80, 0.95)';
+      } else {
+        header.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
+      }
+    });
+  </script>
+</body>
+</html>
