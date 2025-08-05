@@ -1,0 +1,1759 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <b:include data='blog' name='all-head-content'/>
+  <title><data:blog.pageTitle/></title>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <meta name="description" content="SALON MENISSA - Ihr professioneller Friseursalon in Wurzen. Haarpflege für Damen, Herren und Kinder. Färbung, Styling, Dauerwelle und mehr. Seit 2023."/>
+  <meta name="keywords" content="Friseur Wurzen, Salon Menissa, Haarpflege, Damenfriseur, Herrenfriseur, Kinderfriseur, Färbung, Styling, Dauerwelle, Wurzen"/>
+  <meta name="author" content="Aras Ahmad Khatib"/>
+  <meta name="robots" content="index, follow"/>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="SALON MENISSA - Professioneller Friseursalon in Wurzen"/>
+  <meta property="og:description" content="Ihr vertrauensvoller Partner für professionelle Haarpflege in Wurzen. Moderne Techniken, individuelle Beratung für Damen, Herren und Kinder."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://salonmenissa.de"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"/>
+  <meta property="og:locale" content="de_DE"/>
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "SALON MENISSA",
+    "description": "Professioneller Friseursalon in Wurzen für Damen, Herren und Kinder",
+    "url": "https://salonmenissa.de",
+    "telephone": "+49 174 9006321",
+    "email": "salonmenissa@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jacobspl. 7",
+      "addressLocality": "Wurzen",
+      "postalCode": "04808",
+      "addressCountry": "DE"
+    },
+    "openingHours": [
+      "Mo-Fr 09:00-19:00",
+      "Sa 09:00-18:00"
+    ],
+    "priceRange": "€€",
+    "founder": {
+      "@type": "Person",
+      "name": "Aras Ahmad Khatib"
+    },
+    "foundingDate": "2023",
+    "sameAs": [
+      "https://www.instagram.com/salon_menissa",
+      "https://www.facebook.com/share/1EvFhEqJWG/",
+      "https://SalonMenissa.bio.link"
+    ]
+  }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <!-- Lightbox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"/>
+  
+  <b:skin><![CDATA[
+    /* CSS Variables */
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #1abc9c;
+      --text-dark: #2c3e50;
+      --text-light: #7f8c8d;
+      --bg-light: #ecf0f1;
+      --white: #ffffff;
+      --black: #000000;
+      --border-light: #bdc3c7;
+      --shadow: 0 2px 10px rgba(0,0,0,0.1);
+      --shadow-hover: 0 5px 20px rgba(0,0,0,0.15);
+      --transition: all 0.3s ease;
+      --border-radius: 8px;
+      --font-primary: 'Poppins', sans-serif;
+      --font-secondary: 'Playfair Display', serif;
+    }
+
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--font-primary);
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--white);
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Loading Screen */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid var(--bg-light);
+      border-top: 3px solid var(--primary-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Header Styles */
+    .header-wrapper {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    
+    .logo {
+      font-family: var(--font-secondary);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .logo:hover {
+      color: var(--secondary-color);
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+    
+    .nav-menu a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    
+    .nav-menu a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--secondary-color);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+    
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)), 
+                  url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      margin-top: 80px;
+      position: relative;
+    }
+    
+    .hero-content h1 {
+      font-family: var(--font-secondary);
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      animation: fadeInUp 1s ease;
+    }
+    
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 1s ease 0.4s both;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--secondary-color);
+      color: var(--white);
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+    
+    .cta-button:hover {
+      background: var(--accent-color);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .cta-button.secondary {
+      background: transparent;
+      border: 2px solid var(--white);
+    }
+    
+    .cta-button.secondary:hover {
+      background: var(--white);
+      color: var(--primary-color);
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Section Styles */
+    .section {
+      padding: 80px 0;
+    }
+    
+    .section-title {
+      font-family: var(--font-secondary);
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+      position: relative;
+    }
+    
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: var(--secondary-color);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    
+    .about-text h3 {
+      font-family: var(--font-secondary);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    
+    .about-text p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+    
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .feature-item i {
+      color: var(--secondary-color);
+      font-size: 1.2rem;
+    }
+    
+    .about-image {
+      text-align: center;
+    }
+    
+    .about-image img {
+      max-width: 100%;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+    
+    /* Services Section */
+    .services-section {
+      background: var(--bg-light);
+    }
+    
+    .services-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .tab-button {
+      background: var(--white);
+      border: 2px solid var(--border-light);
+      padding: 12px 24px;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+    
+    .tab-button.active,
+    .tab-button:hover {
+      background: var(--secondary-color);
+      color: var(--white);
+      border-color: var(--secondary-color);
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .service-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-align: center;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 2rem;
+      color: var(--white);
+    }
+    
+    .service-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    
+    .service-card p {
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+    
+    .service-price {
+      font-weight: 600;
+      color: var(--secondary-color);
+      font-size: 1.2rem;
+    }
+    
+    /* Gallery Section */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      aspect-ratio: 1;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(44, 62, 80, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    
+    .gallery-overlay i {
+      font-size: 2rem;
+      color: var(--white);
+    }
+    
+    /* Testimonials Section */
+    .testimonials-slider {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .testimonial-item {
+      padding: 2rem;
+      background: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      margin: 1rem;
+    }
+    
+    .testimonial-text {
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    
+    .testimonial-rating {
+      color: #f39c12;
+      margin-bottom: 1rem;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      background: var(--primary-color);
+      color: var(--white);
+    }
+    
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    
+    .contact-info h3 {
+      font-family: var(--font-secondary);
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: var(--secondary-color);
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+    }
+    
+    .contact-item i {
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+      width: 20px;
+    }
+    
+    .contact-item a {
+      color: var(--white);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .contact-item a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .opening-hours {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+    }
+    
+    .opening-hours h3 {
+      font-family: var(--font-secondary);
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: var(--secondary-color);
+    }
+    
+    .hours-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* Map Section */
+    .map-container {
+      height: 400px;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* Blog Section */
+    .blog-posts {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+    
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .blog-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .blog-card:hover .blog-image img {
+      transform: scale(1.1);
+    }
+    
+    .blog-content {
+      padding: 1.5rem;
+    }
+    
+    .blog-title {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    
+    .blog-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .blog-title a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .blog-excerpt {
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    
+    .blog-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border-light);
+      padding-top: 1rem;
+    }
+    
+    .blog-labels a {
+      background: var(--secondary-color);
+      color: var(--white);
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      margin-right: 5px;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--text-dark);
+      color: var(--white);
+      padding: 3rem 0 1rem;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-section h3 {
+      font-family: var(--font-secondary);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+    
+    .footer-section p,
+    .footer-section a {
+      color: #bdc3c7;
+      line-height: 1.6;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .footer-section a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      color: var(--white);
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      background: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid #34495e;
+      padding-top: 1rem;
+      text-align: center;
+      color: #95a5a6;
+    }
+    
+    /* Floating Elements */
+    .floating-contact {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+    
+    .contact-trigger {
+      width: 60px;
+      height: 60px;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      animation: pulse 2s infinite;
+    }
+    
+    .contact-trigger:hover {
+      background: var(--accent-color);
+      transform: scale(1.1);
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+      }
+    }
+    
+    .contact-menu {
+      position: absolute;
+      bottom: 70px;
+      left: 0;
+      background: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-hover);
+      padding: 1rem;
+      min-width: 250px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: var(--transition);
+    }
+    
+    .contact-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .contact-menu h4 {
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    
+    .contact-menu a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      color: var(--text-dark);
+      text-decoration: none;
+      border-radius: 4px;
+      transition: var(--transition);
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-menu a:hover {
+      background: var(--bg-light);
+      color: var(--secondary-color);
+    }
+    
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 1000;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    
+    /* Cookie Banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--text-dark);
+      color: var(--white);
+      padding: 1rem;
+      z-index: 1001;
+      transform: translateY(100%);
+      transition: var(--transition);
+    }
+    
+    .cookie-banner.show {
+      transform: translateY(0);
+    }
+    
+    .cookie-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+    
+    .cookie-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .cookie-btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .cookie-btn.accept {
+      background: var(--secondary-color);
+      color: var(--white);
+    }
+    
+    .cookie-btn.decline {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid var(--white);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: block;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+      }
+      
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .about-content,
+      .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .services-tabs {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cookie-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .floating-contact {
+        bottom: 80px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .section {
+        padding: 60px 0;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .services-grid,
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Print Styles */
+    @media print {
+      .header-wrapper,
+      .floating-contact,
+      .back-to-top,
+      .cookie-banner {
+        display: none;
+      }
+      
+      .hero-section {
+        height: auto;
+        background: none;
+        color: var(--text-dark);
+        margin-top: 0;
+      }
+    }
+  ]]></b:skin>
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Header -->
+  <header class='header-wrapper' id='header'>
+    <div class='container'>
+      <div class='header-container'>
+        <a expr:href='data:blog.homepageUrl' class='logo'>SALON MENISSA</a>
+        <nav>
+          <ul class='nav-menu' id='navMenu'>
+            <li><a href='#home'>Home</a></li>
+            <li><a href='#about'>Unsere Story</a></li>
+            <li><a href='#services'>Leistungen</a></li>
+            <li><a href='#gallery'>Galerie</a></li>
+            <li><a href='#blog'>Blog</a></li>
+            <li><a href='#contact'>Kontakt</a></li>
+            <li><a href='#privacy'>Datenschutz</a></li>
+          </ul>
+          <button class='mobile-menu-toggle' id='mobileMenuToggle'>
+            <i class='fas fa-bars'></i>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Only on Homepage) -->
+  <b:if cond='data:blog.url == data:blog.homepageUrl'>
+    <section id='home' class='hero-section'>
+      <div class='container'>
+        <div class='hero-content'>
+          <h1>Willkommen bei SALON MENISSA</h1>
+          <p>Ihr vertrauensvoller Partner für professionelle Haarpflege in Wurzen seit 2023. Moderne Techniken treffen auf traditionelle Friseurkunst.</p>
+          <div class='cta-buttons'>
+            <a href='#contact' class='cta-button'>Kontakt aufnehmen</a>
+            <a href='#services' class='cta-button secondary'>Unsere Leistungen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id='about' class='section'>
+      <div class='container'>
+        <h2 class='section-title'>Unsere Story</h2>
+        <p class='section-subtitle'>SALON MENISSA - Tradition trifft Moderne</p>
+        <div class='about-content'>
+          <div class='about-text'>
+            <h3>Seit 2023 in Wurzen</h3>
+            <p>SALON MENISSA ist Ihr vertrauensvoller Partner für professionelle Haarpflege in Wurzen. Unser Salon verbindet traditionelle Friseurkunst mit modernen Techniken und Trends.</p>
+            <p>Wir bieten individuelle Beratung und maßgeschneiderte Lösungen für jeden Haartyp. Unser erfahrenes Team sorgt dafür, dass Sie sich bei uns rundum wohlfühlen.</p>
+            <p>Bei uns steht der Kunde im Mittelpunkt. Wir nehmen uns die Zeit, Ihre Wünsche zu verstehen und umzusetzen, damit Sie mit einem perfekten Look unseren Salon verlassen.</p>
+            <div class='about-features'>
+              <div class='feature-item'>
+                <i class='fas fa-users'></i>
+                <span>Für alle Altersgruppen</span>
+              </div>
+              <div class='feature-item'>
+                <i class='fas fa-language'></i>
+                <span>Deutsch, Arabisch, Kurdisch</span>
+              </div>
+              <div class='feature-item'>
+                <i class='fas fa-credit-card'></i>
+                <span>Bar- und Kartenzahlung</span>
+              </div>
+              <div class='feature-item'>
+                <i class='fas fa-clock'></i>
+                <span>Termine erwünscht</span>
+              </div>
+            </div>
+          </div>
+          <div class='about-image'>
+            <img src='https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' alt='SALON MENISSA Innenansicht'/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id='services' class='section services-section'>
+      <div class='container'>
+        <h2 class='section-title'>Unsere Leistungen</h2>
+        <p class='section-subtitle'>Professionelle Haarpflege für Damen, Herren und Kinder</p>
+        
+        <div class='services-tabs'>
+          <button class='tab-button active' data-tab='damen'>Damen</button>
+          <button class='tab-button' data-tab='herren'>Herren</button>
+          <button class='tab-button' data-tab='kinder'>Kinder</button>
+          <button class='tab-button' data-tab='coloration'>Coloration</button>
+          <button class='tab-button' data-tab='extras'>Extras</button>
+          <button class='tab-button' data-tab='pakete'>Sparpakete</button>
+        </div>
+
+        <div class='services-grid' id='servicesGrid'>
+          <!-- Damen Services -->
+          <div class='service-card' data-category='damen'>
+            <div class='service-icon'><i class='fas fa-cut'></i></div>
+            <h3>Waschen &amp; Schneiden</h3>
+            <p>Professioneller Haarschnitt mit Beratung für Ihren perfekten Look</p>
+            <div class='service-price'>ab 22,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='damen'>
+            <div class='service-icon'><i class='fas fa-wind'></i></div>
+            <h3>Waschen, Schneiden, Föhnen &amp; Styling</h3>
+            <p>Komplettservice mit professionellem Styling für den perfekten Auftritt</p>
+            <div class='service-price'>ab 32,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='damen'>
+            <div class='service-icon'><i class='fas fa-sync-alt'></i></div>
+            <h3>Dauerwelle</h3>
+            <p>Langanhaltende Locken und Volumen für Ihr Haar</p>
+            <div class='service-price'>ab 42,00 €</div>
+          </div>
+
+          <!-- Herren Services -->
+          <div class='service-card' data-category='herren' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-cut'></i></div>
+            <h3>Trockenhaarschnitt</h3>
+            <p>Schneller und präziser Haarschnitt ohne Waschen</p>
+            <div class='service-price'>18,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='herren' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-shower'></i></div>
+            <h3>Waschen, Schneiden &amp; Föhnen</h3>
+            <p>Komplettservice mit Haarwäsche und Styling</p>
+            <div class='service-price'>21,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='herren' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-user-tie'></i></div>
+            <h3>Bartrasur</h3>
+            <p>Professionelle Bartrasur für den perfekten Look</p>
+            <div class='service-price'>13,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='herren' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-sync-alt'></i></div>
+            <h3>Dauerwelle Herren</h3>
+            <p>Volumen und Struktur für Herrenhaar</p>
+            <div class='service-price'>ab 29,00 €</div>
+          </div>
+
+          <!-- Kinder Services -->
+          <div class='service-card' data-category='kinder' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-child'></i></div>
+            <h3>Kinderhaarschnitt bis 7 Jahre</h3>
+            <p>Einfühlsame Betreuung für die Kleinsten</p>
+            <div class='service-price'>14,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='kinder' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-user-graduate'></i></div>
+            <h3>Kinderhaarschnitt bis 12 Jahre</h3>
+            <p>Altersgerechte Frisuren für Schulkinder</p>
+            <div class='service-price'>16,00 €</div>
+          </div>
+
+          <!-- Coloration Services -->
+          <div class='service-card' data-category='coloration' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-palette'></i></div>
+            <h3>Ansatzfarbe</h3>
+            <p>Professionelle Nachfärbung des Haaransatzes</p>
+            <div class='service-price'>ab 35,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='coloration' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-paint-brush'></i></div>
+            <h3>Längen und Spitzen</h3>
+            <p>Auffrischung der Haarfarbe in Längen und Spitzen</p>
+            <div class='service-price'>ab 20,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='coloration' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-sun'></i></div>
+            <h3>Blondieren/Aufhellen</h3>
+            <p>Professionelle Haaraufhellung für den perfekten Blondton</p>
+            <div class='service-price'>ab 70,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='coloration' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-magic'></i></div>
+            <h3>Strähnen (Highlights)</h3>
+            <p>Akzente setzen mit professionellen Strähnen</p>
+            <div class='service-price'>ab 65,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='coloration' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-gradient'></i></div>
+            <h3>Balayage</h3>
+            <p>Natürliche Farbverläufe für einen modernen Look</p>
+            <div class='service-price'>ab 70,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='coloration' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-mountain'></i></div>
+            <h3>Ombre</h3>
+            <p>Trendiger Farbverlauf von dunkel zu hell</p>
+            <div class='service-price'>ab 70,00 €</div>
+          </div>
+
+          <!-- Extras -->
+          <div class='service-card' data-category='extras' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-eye'></i></div>
+            <h3>Augenbrauen färben</h3>
+            <p>Perfekt definierte Augenbrauen</p>
+            <div class='service-price'>13,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='extras' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-eye-dropper'></i></div>
+            <h3>Wimpern färben</h3>
+            <p>Ausdrucksstarke Wimpern ohne Mascara</p>
+            <div class='service-price'>10,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='extras' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-spa'></i></div>
+            <h3>Kopfmassage</h3>
+            <p>Entspannende Massage für Kopf und Nacken</p>
+            <div class='service-price'>5,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='extras' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-leaf'></i></div>
+            <h3>Gesichtsmaske</h3>
+            <p>Pflegende Behandlung für Ihre Haut</p>
+            <div class='service-price'>7,00 €</div>
+          </div>
+
+          <!-- Sparpakete -->
+          <div class='service-card' data-category='pakete' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-male'></i></div>
+            <h3>SPARPAKET HERREN</h3>
+            <p>Waschen, Schneiden, Föhnen, Bartrasur und Styling</p>
+            <div class='service-price'>29,00 €</div>
+          </div>
+          
+          <div class='service-card' data-category='pakete' style='display: none;'>
+            <div class='service-icon'><i class='fas fa-female'></i></div>
+            <h3>SPARPAKET DAMEN</h3>
+            <p>Wimpern färben, Augenbrauen zupfen, Kopfmassage und Gesichtsmaske</p>
+            <div class='service-price'>24,00 €</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id='gallery' class='section'>
+      <div class='container'>
+        <h2 class='section-title'>Unsere Galerie</h2>
+        <p class='section-subtitle'>Einblicke in unsere Arbeit und unseren Salon</p>
+        <div class='gallery-grid'>
+          <div class='gallery-item'>
+            <img src='https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' alt='Salon Interieur'/>
+            <div class='gallery-overlay'>
+              <i class='fas fa-search-plus'></i>
+            </div>
+          </div>
+          <div class='gallery-item'>
+            <img src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' alt='Herrenhaarschnitt'/>
+            <div class='gallery-overlay'>
+              <i class='fas fa-search-plus'></i>
+            </div>
+          </div>
+          <div class='gallery-item'>
+            <img src='https://images.unsplash.com/photo-1581618039688-e7d5e8e0e3a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' alt='Damenfrisur'/>
+            <div class='gallery-overlay'>
+              <i class='fas fa-search-plus'></i>
+            </div>
+          </div>
+          <div class='gallery-item'>
+            <img src='https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' alt='Salon Arbeitsplatz'/>
+            <div class='gallery-overlay'>
+              <i class='fas fa-search-plus'></i>
+            </div>
+          </div>
+          <div class='gallery-item'>
+            <img src='https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' alt='Färbung'/>
+            <div class='gallery-overlay'>
+              <i class='fas fa-search-plus'></i>
+            </div>
+          </div>
+          <div class='gallery-item'>
+            <img src='https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' alt='Styling'/>
+            <div class='gallery-overlay'>
+              <i class='fas fa-search-plus'></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class='section' style='background: var(--bg-light);'>
+      <div class='container'>
+        <h2 class='section-title'>Was unsere Kunden sagen</h2>
+        <div class='testimonials-slider'>
+          <div class='testimonial-item'>
+            <div class='testimonial-rating'>
+              <i class='fas fa-star'></i>
+              <i class='fas fa-star'></i>
+              <i class='fas fa-star'></i>
+              <i class='fas fa-star'></i>
+              <i class='fas fa-star'></i>
+            </div>
+            <div class='testimonial-text'>
+              "Sehr professioneller Service und freundliches Personal. Ich bin mit meinem neuen Haarschnitt sehr zufrieden!"
+            </div>
+            <div class='testimonial-author'>- Maria S.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id='contact' class='section contact-section'>
+      <div class='container'>
+        <h2 class='section-title' style='color: white;'>Kontakt &amp; Öffnungszeiten</h2>
+        <div class='contact-content'>
+          <div class='contact-info'>
+            <h3>Kontaktinformationen</h3>
+            <div class='contact-item'>
+              <i class='fas fa-map-marker-alt'></i>
+              <span>Jacobspl. 7, 04808 Wurzen</span>
+            </div>
+            <div class='contact-item'>
+              <i class='fas fa-phone'></i>
+              <a href='tel:+4917490063210'>0174 9006321</a>
+            </div>
+            <div class='contact-item'>
+              <i class='fas fa-phone-alt'></i>
+              <a href='tel:+493425826416203425'>03425 8264162</a>
+            </div>
+            <div class='contact-item'>
+              <i class='fas fa-envelope'></i>
+              <a href='mailto:salonmenissa@gmail.com'>salonmenissa@gmail.com</a>
+            </div>
+            <div class='contact-item'>
+              <i class='fas fa-language'></i>
+              <span>Deutsch, Arabisch, Kurdisch</span>
+            </div>
+          </div>
+          <div class='opening-hours'>
+            <h3>Öffnungszeiten</h3>
+            <div class='hours-item'>
+              <span>Montag - Freitag</span>
+              <span>09:00 - 19:00 Uhr</span>
+            </div>
+            <div class='hours-item'>
+              <span>Samstag</span>
+              <span>09:00 - 18:00 Uhr</span>
+            </div>
+            <div class='hours-item'>
+              <span>Sonntag</span>
+              <span>Geschlossen</span>
+            </div>
+            <p style='margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;'>
+              Termine erwünscht, spontane Besuche möglich.<br/>
+              Für Färbung und Dauerwelle wird ein Termin empfohlen.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div style='margin-top: 3rem;'>
+          <h3 style='color: var(--secondary-color); margin-bottom: 1rem; text-align: center;'>So finden Sie uns</h3>
+          <div class='map-container'>
+            <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2490.123456789!2d12.7412345!3d51.3678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJacobspl.%207%2C%2004808%20Wurzen!5e0!3m2!1sde!2sde!4v1234567890' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>
+          </div>
+          <div style='text-align: center; margin-top: 1rem;'>
+            <a href='https://maps.app.goo.gl/DbqLvctMmZ4Tx79a6?g_st=ac' target='_blank' class='cta-button' style='margin-right: 1rem;'>
+              <i class='fas fa-map-marker-alt'></i> Route planen
+            </a>
+            <a href='https://g.page/r/CbVOvVmvEkOREAE/review' target='_blank' class='cta-button secondary'>
+              <i class='fas fa-star'></i> Bewertung abgeben
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </b:if>
+
+  <!-- Blog Section -->
+  <section id='blog' class='blog-posts'>
+    <div class='container'>
+      <h2 class='section-title'>Aktuelles &amp; Tipps</h2>
+      <p class='section-subtitle'>Neuigkeiten aus unserem Salon und Pflegetipps für Ihr Haar</p>
+      
+      <b:section class='main' id='main' maxwidgets='1' showaddelement='no'>
+        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+          <b:widget-settings>
+            <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+            <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+            <b:widget-setting name='showComments'>true</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+            <div class='blog-grid'>
+              <b:if cond='data:posts'>
+                <b:loop values='data:posts' var='post'>
+                  <article class='blog-card'>
+                    <b:if cond='data:post.featuredImage'>
+                      <div class='blog-image'>
+                        <img expr:src='data:post.featuredImage' expr:alt='data:post.title'/>
+                      </div>
+                    <b:else/>
+                      <div class='blog-image'>
+                        <img src='https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' expr:alt='data:post.title'/>
+                      </div>
+                    </b:if>
+                    <div class='blog-content'>
+                      <h3 class='blog-title'>
+                        <a expr:href='data:post.link'><data:post.title/></a>
+                      </h3>
+                      <div class='blog-excerpt'>
+                        <b:if cond='data:post.hasJumpLink'>
+                          <data:post.body/>
+                        <b:else/>
+                          <data:post.body/>
+                        </b:if>
+                      </div>
+                      <div class='blog-meta'>
+                        <span><i class='fas fa-calendar'></i> <data:post.date/></span>
+                        <div class='blog-labels'>
+                          <b:if cond='data:post.labels'>
+                            <b:loop values='data:post.labels' var='label'>
+                              <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
+                            </b:loop>
+                          </b:if>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </b:loop>
+              </b:if>
+            </div>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </div>
+  </section>
+
+  <!-- Privacy Section -->
+  <section id='privacy' class='section' style='background: var(--bg-light);'>
+    <div class='container'>
+      <h2 class='section-title'>Datenschutz &amp; Impressum</h2>
+      <div style='max-width: 800px; margin: 0 auto;'>
+        <h3>Angaben gemäß § 5 TMG</h3>
+        <p><strong>Inhaber:</strong> ARAS AHMAD KHATIB<br/>
+        <strong>Anschrift:</strong> Jacobsplatz 7, 04808 Wurzen, Deutschland<br/>
+        <strong>Telefon:</strong> 0174 9006321<br/>
+        <strong>E-Mail:</strong> salonmenissa@gmail.com</p>
+        
+        <h3 style='margin-top: 2rem;'>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+        <p>ARAS AHMAD KHATIB, gleiche Anschrift</p>
+        
+        <h3 style='margin-top: 2rem;'>Datenschutz</h3>
+        <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie darüber, wie SALON MENISSA mit Ihren Daten umgeht.</p>
+        
+        <h4>Datenerfassung</h4>
+        <p>Wir erfassen personenbezogene Daten nur, wenn Sie uns diese freiwillig mitteilen, z.B. bei einer Kontaktanfrage. Diese Daten verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und geben sie nicht an Dritte weiter.</p>
+        
+        <h4>Cookies</h4>
+        <p>Unsere Website verwendet Cookies, um Ihnen ein besseres Nutzererlebnis zu bieten. Sie können Ihren Browser so einstellen, dass er Cookies blockiert oder über deren Verwendung informiert.</p>
+        
+        <h4>Ihre Rechte</h4>
+        <p>Sie haben das Recht auf Auskunft über Ihre gespeicherten Daten, Berichtigung, Löschung oder Einschränkung der Verarbeitung. Wenden Sie sich dazu jederzeit an uns.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class='footer'>
+    <div class='container'>
+      <div class='footer-content'>
+        <div class='footer-section'>
+          <h3>SALON MENISSA</h3>
+          <p>Ihr vertrauensvoller Partner für professionelle Haarpflege in Wurzen seit 2023.</p>
+          <div class='social-links'>
+            <a href='https://www.instagram.com/salon_menissa' target='_blank' aria-label='Instagram'>
+              <i class='fab fa-instagram'></i>
+            </a>
+            <a href='https://www.facebook.com/share/1EvFhEqJWG/' target='_blank' aria-label='Facebook'>
+              <i class='fab fa-facebook'></i>
+            </a>
+            <a href='https://SalonMenissa.bio.link' target='_blank' aria-label='Bio Link'>
+              <i class='fas fa-link'></i>
+            </a>
+          </div>
+        </div>
+        <div class='footer-section'>
+          <h3>Kontakt</h3>
+          <p>Jacobspl. 7, 04808 Wurzen<br/>
+          Tel: 0174 9006321<br/>
+          E-Mail: salonmenissa@gmail.com</p>
+        </div>
+        <div class='footer-section'>
+          <h3>Öffnungszeiten</h3>
+          <p>Mo-Fr: 09:00 - 19:00 Uhr<br/>
+          Sa: 09:00 - 18:00 Uhr<br/>
+          So: Geschlossen</p>
+        </div>
+        <div class='footer-section'>
+          <h3>Sprachen</h3>
+          <p>Wir sprechen:<br/>
+          Deutsch, Arabisch, Kurdisch</p>
+        </div>
+      </div>
+      <div class='footer-bottom'>
+        <p>&copy; 2024 SALON MENISSA. Alle Rechte vorbehalten. | Inhaber: Aras Ahmad Khatib</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Button -->
+  <div class='floating-contact'>
+    <div class='contact-trigger' id='contactTrigger'>
+      <i class='fas fa-phone'></i>
+    </div>
+    <div class='contact-menu' id='contactMenu'>
+      <h4>Kontakt aufnehmen</h4>
+      <a href='tel:+4917490063210'>
+        <i class='fas fa-phone'></i> 0174 9006321
+      </a>
+      <a href='tel:+4934258264162'>
+        <i class='fas fa-phone-alt'></i> 03425 8264162
+      </a>
+      <a href='https://wa.me/4917490063210' target='_blank'>
+        <i class='fab fa-whatsapp'></i> WhatsApp
+      </a>
+      <a href='mailto:salonmenissa@gmail.com'>
+        <i class='fas fa-envelope'></i> E-Mail
+      </a>
+      <a href='https://SalonMenissa.bio.link' target='_blank'>
+        <i class='fas fa-link'></i> Bio Link
+      </a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <div class='back-to-top' id='backToTop'>
+    <i class='fas fa-chevron-up'></i>
+  </div>
+
+  <!-- Cookie Banner -->
+  <div class='cookie-banner' id='cookieBanner'>
+    <div class='cookie-content'>
+      <div>
+        <p>Diese Website verwendet Cookies, um Ihnen die bestmögliche Nutzererfahrung zu bieten. Durch die weitere Nutzung stimmen Sie der Verwendung von Cookies zu.</p>
+      </div>
+      <div class='cookie-buttons'>
+        <button class='cookie-btn accept' onclick='acceptCookies()'>Akzeptieren</button>
+        <button class='cookie-btn decline' onclick='declineCookies()'>Ablehnen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  
+  <script>
+    //<![CDATA[
+    // Loading Screen
+    window.addEventListener('load', function() {
+      const loadingScreen = document.getElementById('loadingScreen');
+      setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 1000);
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    mobileMenuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      const icon = this.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    // Services Tabs
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const category = this.dataset.tab;
+        
+        // Update active tab
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Show/hide services
+        serviceCards.forEach(card => {
+          if (card.dataset.category === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Floating Contact Menu
+    const contactTrigger = document.getElementById('contactTrigger');
+    const contactMenu = document.getElementById('contactMenu');
+
+    contactTrigger.addEventListener('click', function() {
+      contactMenu.classList.toggle('active');
+    });
+
+    // Close contact menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!contactTrigger.contains(e.target) && !contactMenu.contains(e.target)) {
+        contactMenu.classList.remove('active');
+      }
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+      
+      // Header background change
+      const header = document.getElementById('header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+      } else {
+        header.style.background = 'var(--white)';
+        header.style.backdropFilter = 'none';
+      }
+    });
+
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Smooth Scrolling for Navigation Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = document.getElementById('header').offsetHeight;
+          const targetPosition = target.offsetTop - headerHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          navMenu.classList.remove('active');
+          mobileMenuToggle.querySelector('i').classList.add('fa-bars');
+          mobileMenuToggle.querySelector('i').classList.remove('fa-times');
+        }
+      });
+    });
+
+    // Gallery Lightbox
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    galleryItems.forEach((img, index) => {
+      img.setAttribute('data-lightbox', 'gallery');
+      img.setAttribute('data-title', `Salon Menissa - Bild ${index + 1}`);
+    });
+
+    // Cookie Banner
+    function showCookieBanner() {
+      const cookieBanner = document.getElementById('cookieBanner');
+      if (!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => {
+          cookieBanner.classList.add('show');
+        }, 2000);
+      }
+    }
+
+    function acceptCookies() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      document.getElementById('cookieBanner').classList.remove('show');
+    }
+
+    function declineCookies() {
+      localStorage.setItem('cookieConsent', 'declined');
+      document.getElementById('cookieBanner').classList.remove('show');
+    }
+
+    // Show cookie banner on page load
+    showCookieBanner();
+
+    // Animation on Scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.service-card, .blog-card, .gallery-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+    //]]>
+  </script>
+</body>
+</html>
