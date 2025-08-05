@@ -1,0 +1,40 @@
+# متطلبات تطبيق Org 2024 Sound & Beat Unlocker
+# Requirements for Org 2024 Sound & Beat Unlocker
+
+# واجهة المستخدم الرسومية
+# GUI Framework
+tkinter  # مدمج مع Python عادة / Usually included with Python
+
+# تشفير وحماية البيانات
+# Cryptography and Data Protection
+cryptography>=3.4.8
+
+# تشغيل الصوت
+# Audio Playback
+pygame>=2.1.0
+
+# معالجة الملفات والمسارات
+# File and Path Processing
+pathlib  # مدمج مع Python 3.4+ / Built-in with Python 3.4+
+
+# مكتبات أساسية
+# Core Libraries
+os  # مدمجة / Built-in
+shutil  # مدمجة / Built-in
+struct  # مدمجة / Built-in
+hashlib  # مدمجة / Built-in
+base64  # مدمجة / Built-in
+threading  # مدمجة / Built-in
+time  # مدمجة / Built-in
+json  # مدمجة / Built-in
+
+# مكتبات اختيارية لمعالجة الصوت المتقدمة
+# Optional libraries for advanced audio processing
+# mutagen>=1.45.0  # لقراءة معلومات MP3 المتقدمة / For advanced MP3 metadata
+# pydub>=0.25.1    # لمعالجة الصوت المتقدمة / For advanced audio processing
+# librosa>=0.8.0   # لتحليل الصوت / For audio analysis
+
+# مكتبات اختيارية للواجهة المحسنة
+# Optional libraries for enhanced UI
+# customtkinter>=4.6.3  # واجهة حديثة / Modern UI
+# pillow>=8.3.0          # معالجة الصور / Image processing
