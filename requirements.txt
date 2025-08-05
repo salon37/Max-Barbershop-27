@@ -1,40 +1,47 @@
-# متطلبات تطبيق Org 2024 Sound & Beat Unlocker
-# Requirements for Org 2024 Sound & Beat Unlocker
+# متطلبات تطبيق Music Studio 3 Unlocker Tool
+# Requirements for Music Studio 3 Unlocker Tool
 
 # واجهة المستخدم الرسومية
 # GUI Framework
 tkinter  # مدمج مع Python عادة / Usually included with Python
 
-# تشفير وحماية البيانات
-# Cryptography and Data Protection
-cryptography>=3.4.8
-
-# تشغيل الصوت
-# Audio Playback
+# تشغيل الصوت والمعاينة
+# Audio Playback and Preview
 pygame>=2.1.0
 
-# معالجة الملفات والمسارات
-# File and Path Processing
-pathlib  # مدمج مع Python 3.4+ / Built-in with Python 3.4+
+# مكتبات أساسية (مدمجة مع Python)
+# Core Libraries (Built-in with Python)
+os
+shutil
+json
+sqlite3  # لقراءة قواعد بيانات الآلات الموسيقية / For reading instrument databases
+hashlib
+pathlib
+threading
+time
+subprocess
 
-# مكتبات أساسية
-# Core Libraries
-os  # مدمجة / Built-in
-shutil  # مدمجة / Built-in
-struct  # مدمجة / Built-in
-hashlib  # مدمجة / Built-in
-base64  # مدمجة / Built-in
-threading  # مدمجة / Built-in
-time  # مدمجة / Built-in
-json  # مدمجة / Built-in
+# مكتبات اختيارية للميزات المتقدمة
+# Optional libraries for advanced features
 
-# مكتبات اختيارية لمعالجة الصوت المتقدمة
-# Optional libraries for advanced audio processing
-# mutagen>=1.45.0  # لقراءة معلومات MP3 المتقدمة / For advanced MP3 metadata
-# pydub>=0.25.1    # لمعالجة الصوت المتقدمة / For advanced audio processing
+# لتحليل ملفات الصوت المتقدم
+# For advanced audio file analysis
+# mutagen>=1.45.0  # لقراءة معلومات MP3/WAV المتقدمة / For advanced MP3/WAV metadata
+# pydub>=0.25.1    # لمعالجة الصوت / For audio processing
 # librosa>=0.8.0   # لتحليل الصوت / For audio analysis
 
-# مكتبات اختيارية للواجهة المحسنة
-# Optional libraries for enhanced UI
+# للواجهة المحسنة
+# For enhanced UI
 # customtkinter>=4.6.3  # واجهة حديثة / Modern UI
 # pillow>=8.3.0          # معالجة الصور / Image processing
+
+# لفتح الأقفال المتقدم
+# For advanced unlocking
+# cryptography>=3.4.8   # للتشفير وفك التشفير / For encryption/decryption
+
+# ملاحظات مهمة:
+# Important Notes:
+# - يتطلب Python 3.7 أو أحدث / Requires Python 3.7 or newer
+# - تم تصميم الأداة خصيصاً لـ Music Studio 3 من Xewton / Designed specifically for Music Studio 3 by Xewton
+# - يدعم فتح قفل 60 آلة موسيقية مقفولة / Supports unlocking 60 locked musical instruments
+# - يعمل مع قواعد بيانات SQLite للآلات / Works with SQLite databases for instruments
