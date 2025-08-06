@@ -19,7 +19,6 @@
     <meta content='SALON MENISSA - Ihr Friseur in Wurzen' property='og:title'/>
     <meta content='Professionelle Haarpflege für Damen, Herren und Kinder in Wurzen. Moderne Techniken und traditionelle Friseurkunst.' property='og:description'/>
     <meta content='website' property='og:type'/>
-    <meta content='https://salonmenissa.blogspot.com' property='og:url'/>
     
     <!-- Schema.org Structured Data -->
     <script type='application/ld+json'>
@@ -28,7 +27,6 @@
         "@type": "HairSalon",
         "name": "SALON MENISSA",
         "description": "Professionelle Haarpflege in Wurzen für Damen, Herren und Kinder",
-        "url": "https://salonmenissa.blogspot.com",
         "telephone": ["+49 174 9006321", "+49 3425 8264162"],
         "email": "salonmenissa@gmail.com",
         "address": {
@@ -63,7 +61,7 @@
     }
     </script>
 
-    <style type='text/css'>
+    <b:skin><![CDATA[
     /* Reset and Base Styles */
     * {
         margin: 0;
@@ -84,9 +82,9 @@
         padding: 0 20px;
     }
 
-    /* Color Scheme - White, Black, Light Blue */
+    /* Color Scheme - White, Black, Blue */
     :root {
-        --primary-color: #87CEEB; /* Light Blue */
+        --primary-color: #007BFF; /* Standard Blue */
         --secondary-color: #000000; /* Black */
         --accent-color: #ffffff; /* White */
         --text-color: #333333;
@@ -173,7 +171,7 @@
 
     /* Hero Section */
     .hero-section {
-        background: linear-gradient(135deg, var(--primary-color) 0%, rgba(135, 206, 235, 0.8) 100%);
+        background: linear-gradient(135deg, var(--primary-color) 0%, rgba(0, 123, 255, 0.8) 100%);
         color: white;
         padding: 100px 0;
         text-align: center;
@@ -263,45 +261,50 @@
         gap: 30px;
     }
 
-    .service-category {
+    .service-card {
         background: white;
         border-radius: 15px;
-        padding: 30px;
+        padding: 25px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         transition: transform 0.3s ease;
+        text-align: center;
+        border: 2px solid transparent;
     }
 
-    .service-category:hover {
+    .service-card:hover {
         transform: translateY(-10px);
+        border-color: var(--primary-color);
     }
 
-    .service-category h3 {
+    .service-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
+
+    .service-card h3 {
         color: var(--primary-color);
         font-size: 1.5rem;
-        margin-bottom: 20px;
-        border-bottom: 2px solid var(--primary-color);
-        padding-bottom: 10px;
+        margin-bottom: 15px;
     }
 
-    .service-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    .service-item:last-child {
-        border-bottom: none;
-    }
-
-    .service-name {
-        font-weight: 500;
+    .service-card p {
+        color: #666;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
     .service-price {
-        color: var(--primary-color);
+        color: var(--secondary-color);
         font-weight: bold;
+        font-size: 1.2rem;
+        background: var(--light-gray);
+        padding: 10px 20px;
+        border-radius: 25px;
+        display: inline-block;
     }
 
     /* Gallery Section */
@@ -343,14 +346,16 @@
 
     .contact-item {
         display: flex;
-        align-items: center;
-        margin-bottom: 15px;
+        align-items: flex-start;
+        margin-bottom: 20px;
     }
 
     .contact-item i {
         color: var(--primary-color);
         margin-right: 15px;
-        width: 20px;
+        width: 25px;
+        font-size: 1.2rem;
+        margin-top: 2px;
     }
 
     .hours-table {
@@ -361,7 +366,7 @@
 
     .hours-table th,
     .hours-table td {
-        padding: 10px;
+        padding: 12px;
         text-align: left;
         border-bottom: 1px solid var(--border-color);
     }
@@ -369,6 +374,20 @@
     .hours-table th {
         background: var(--light-gray);
         font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .business-info {
+        background: var(--light-gray);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        border-left: 4px solid var(--primary-color);
+    }
+
+    .business-info h4 {
+        color: var(--primary-color);
+        margin-bottom: 10px;
     }
 
     /* Map Container */
@@ -421,14 +440,15 @@
 
     .social-links a {
         display: inline-block;
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         background: var(--primary-color);
         color: white;
         text-align: center;
-        line-height: 40px;
+        line-height: 45px;
         border-radius: 50%;
         transition: transform 0.3s ease;
+        font-size: 1.2rem;
     }
 
     .social-links a:hover {
@@ -477,7 +497,7 @@
         border-radius: 10px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         padding: 20px;
-        min-width: 250px;
+        min-width: 280px;
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
@@ -492,10 +512,11 @@
 
     .contact-dropdown a {
         display: block;
-        padding: 10px 0;
+        padding: 12px 0;
         color: var(--text-color);
         text-decoration: none;
         border-bottom: 1px solid var(--border-color);
+        font-size: 0.95rem;
     }
 
     .contact-dropdown a:last-child {
@@ -615,6 +636,7 @@
     .testimonial-rating {
         color: #ffd700;
         margin-bottom: 15px;
+        font-size: 1.2rem;
     }
 
     /* Blog Section */
@@ -702,56 +724,19 @@
             gap: 15px;
             text-align: center;
         }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
     }
 
     /* Smooth Scrolling */
     html {
         scroll-behavior: smooth;
     }
-
-    /* Loading Animation */
-    .loading {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255,255,255,0.9);
-        z-index: 9999;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .spinner {
-        width: 50px;
-        height: 50px;
-        border: 5px solid var(--border-color);
-        border-top: 5px solid var(--primary-color);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-
-    /* Print Styles */
-    @media print {
-        .floating-contact,
-        .back-to-top,
-        .cookie-consent {
-            display: none;
-        }
-    }
-    </style>
+    ]]></b:skin>
 </head>
 <body>
-    <div class='loading' id='loading'>
-        <div class='spinner'></div>
-    </div>
-
     <!-- Header -->
     <header class='site-header'>
         <div class='container'>
@@ -801,12 +786,9 @@
                     <p>Bei uns steht der Kunde im Mittelpunkt. Wir nehmen uns die Zeit, Ihre Wünsche zu verstehen und umzusetzen, damit Sie mit einem perfekten Look unseren Salon verlassen.</p>
                     
                     <p>Unser Salon ist für alle Altersgruppen geeignet - wir heißen sowohl Kinder als auch Erwachsene herzlich willkommen. Termine sind erwünscht, aber auch spontane Besuche sind möglich.</p>
-                    
-                    <p><strong>Gegründet 2023 von Aras Ahmad Khatib</strong></p>
-                    <p>Wir sprechen Deutsch, Arabisch und Kurdisch.</p>
                 </div>
                 <div class='about-image'>
-                    <img alt='SALON MENISSA Innenansicht' src='https://via.placeholder.com/500x400/87CEEB/FFFFFF?text=SALON+MENISSA'/>
+                    <img alt='SALON MENISSA Innenansicht' src='https://via.placeholder.com/500x400/007BFF/FFFFFF?text=SALON+MENISSA' />
                 </div>
             </div>
         </div>
@@ -818,134 +800,204 @@
             <h2 class='section-title'>Unsere Leistungen</h2>
             <div class='services-grid'>
                 
-                <!-- Sparpaket -->
-                <div class='service-category'>
-                    <h3>Sparpakete</h3>
-                    <div class='service-item'>
-                        <span class='service-name'>Sparpaket Herren<br><small>Waschen, Schneiden, Föhnen, Bartrasur, Styling</small></span>
-                        <span class='service-price'>29,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Sparpaket Damen<br><small>Wimpern färben, Augenbrauen zupfen, Kopfmassage, Gesichtsmaske</small></span>
-                        <span class='service-price'>24,00 €</span>
-                    </div>
+                <!-- Sparpaket Herren -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=♂' alt='Herren Sparpaket' />
+                    <h3>Sparpaket Herren</h3>
+                    <p>Komplettservice für den modernen Mann: Professionelles Waschen, stilvoller Schnitt, perfektes Föhnen, traditionelle Bartrasur und finales Styling für den perfekten Look.</p>
+                    <div class='service-price'>29,00 €</div>
                 </div>
 
-                <!-- Damen -->
-                <div class='service-category'>
-                    <h3>Damen</h3>
-                    <div class='service-item'>
-                        <span class='service-name'>Waschen &amp; Schneiden</span>
-                        <span class='service-price'>ab 22,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Waschen, Schneiden, Föhnen &amp; Styling</span>
-                        <span class='service-price'>ab 32,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Dauerwelle</span>
-                        <span class='service-price'>ab 42,00 €</span>
-                    </div>
+                <!-- Sparpaket Damen -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=♀' alt='Damen Sparpaket' />
+                    <h3>Sparpaket Damen</h3>
+                    <p>Verwöhnprogramm für die anspruchsvolle Dame: Wimpern färben für ausdrucksstarke Augen, Augenbrauen zupfen, entspannende Kopfmassage und pflegende Gesichtsmaske.</p>
+                    <div class='service-price'>24,00 €</div>
                 </div>
 
-                <!-- Herren -->
-                <div class='service-category'>
-                    <h3>Herren</h3>
-                    <div class='service-item'>
-                        <span class='service-name'>Trockenhaarschnitt</span>
-                        <span class='service-price'>18,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Waschen, Schneiden &amp; Föhnen</span>
-                        <span class='service-price'>21,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Bartrasur</span>
-                        <span class='service-price'>13,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Dauerwelle</span>
-                        <span class='service-price'>ab 29,00 €</span>
-                    </div>
+                <!-- Damen Waschen & Schneiden -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=✂' alt='Waschen Schneiden' />
+                    <h3>Waschen &amp; Schneiden</h3>
+                    <p>Professionelle Haarwäsche mit hochwertigen Produkten und präziser Haarschnitt, der perfekt zu Ihrem Gesicht und Stil passt.</p>
+                    <div class='service-price'>ab 22,00 €</div>
                 </div>
 
-                <!-- Kinder & Jugendliche -->
-                <div class='service-category'>
-                    <h3>Kinder &amp; Jugendliche</h3>
-                    <div class='service-item'>
-                        <span class='service-name'>Haarschnitt, Kinder bis 7 Jahre</span>
-                        <span class='service-price'>14,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Haarschnitt, Kinder bis 12 Jahre</span>
-                        <span class='service-price'>16,00 €</span>
-                    </div>
+                <!-- Damen Komplett -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=💫' alt='Komplett Service' />
+                    <h3>Waschen, Schneiden, Föhnen &amp; Styling</h3>
+                    <p>Rundum-Service für den perfekten Auftritt: Gründliche Haarwäsche, individueller Schnitt, professionelles Föhnen und stilvolles Styling.</p>
+                    <div class='service-price'>ab 32,00 €</div>
                 </div>
 
-                <!-- Coloration -->
-                <div class='service-category'>
-                    <h3>Coloration</h3>
-                    <div class='service-item'>
-                        <span class='service-name'>Ansatzfarbe</span>
-                        <span class='service-price'>ab 35,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Längen und Spitzen aufrischen</span>
-                        <span class='service-price'>ab 20,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Ansatz Aufhellen/Blondieren</span>
-                        <span class='service-price'>ab 45,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Tönung/Aufrischung</span>
-                        <span class='service-price'>ab 20,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Blondieren/Aufhellen</span>
-                        <span class='service-price'>ab 70,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Strähnen (Highlights)</span>
-                        <span class='service-price'>ab 65,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Balayage</span>
-                        <span class='service-price'>ab 70,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Painting</span>
-                        <span class='service-price'>ab 70,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Ombre</span>
-                        <span class='service-price'>ab 70,00 €</span>
-                    </div>
+                <!-- Dauerwelle Damen -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🌊' alt='Dauerwelle' />
+                    <h3>Dauerwelle Damen</h3>
+                    <p>Moderne Dauerwelle für langanhaltende Locken und Volumen. Mit schonenden Techniken für natürlich aussehende, gesunde Locken.</p>
+                    <div class='service-price'>ab 42,00 €</div>
                 </div>
 
-                <!-- Extras -->
-                <div class='service-category'>
-                    <h3>Extras</h3>
-                    <div class='service-item'>
-                        <span class='service-name'>Augenbrauen färben</span>
-                        <span class='service-price'>13,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Wimpern färben</span>
-                        <span class='service-price'>10,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Augenbrauen zupfen (Fadentechnik)</span>
-                        <span class='service-price'>5,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Kopfmassage</span>
-                        <span class='service-price'>5,00 €</span>
-                    </div>
-                    <div class='service-item'>
-                        <span class='service-name'>Gesichtsmaske</span>
-                        <span class='service-price'>7,00 €</span>
-                    </div>
+                <!-- Herren Trockenschnitt -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=⚡' alt='Trockenschnitt' />
+                    <h3>Herren Trockenhaarschnitt</h3>
+                    <p>Schneller, präziser Haarschnitt ohne Waschen. Ideal für regelmäßige Nachschnitte und wenn es mal schnell gehen muss.</p>
+                    <div class='service-price'>18,00 €</div>
+                </div>
+
+                <!-- Herren Waschen Schneiden -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🚿' alt='Herren Waschen' />
+                    <h3>Waschen, Schneiden &amp; Föhnen</h3>
+                    <p>Klassischer Herren-Service: Erfrischende Haarwäsche, präziser Schnitt und professionelles Föhnen für den gepflegten Gentleman.</p>
+                    <div class='service-price'>21,00 €</div>
+                </div>
+
+                <!-- Bartrasur -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🪒' alt='Bartrasur' />
+                    <h3>Bartrasur</h3>
+                    <p>Traditionelle Bartrasur mit heißen Tüchern und hochwertigen Rasurprodukten für die perfekte Rasur und entspannte Pflege.</p>
+                    <div class='service-price'>13,00 €</div>
+                </div>
+
+                <!-- Dauerwelle Herren -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=💇' alt='Herren Dauerwelle' />
+                    <h3>Dauerwelle Herren</h3>
+                    <p>Moderne Herren-Dauerwelle für mehr Volumen und Struktur. Perfekt für dünnes Haar oder für einen neuen, dynamischen Look.</p>
+                    <div class='service-price'>ab 29,00 €</div>
+                </div>
+
+                <!-- Kinder bis 7 Jahre -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=👶' alt='Kinder bis 7' />
+                    <h3>Haarschnitt Kinder bis 7 Jahre</h3>
+                    <p>Kinderfreundlicher Haarschnitt in entspannter Atmosphäre. Wir nehmen uns viel Zeit und Geduld für unsere kleinsten Kunden.</p>
+                    <div class='service-price'>14,00 €</div>
+                </div>
+
+                <!-- Kinder bis 12 Jahre -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🧒' alt='Kinder bis 12' />
+                    <h3>Haarschnitt Kinder bis 12 Jahre</h3>
+                    <p>Altersgerechte Haarschnitte für Kinder und Jugendliche. Von klassisch bis trendy - wir erfüllen jeden Wunsch.</p>
+                    <div class='service-price'>16,00 €</div>
+                </div>
+
+                <!-- Ansatzfarbe -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🎨' alt='Ansatzfarbe' />
+                    <h3>Ansatzfarbe</h3>
+                    <p>Professionelle Ansatzfärbung für gleichmäßige Farbe vom Ansatz bis in die Spitzen. Deckt graue Haare perfekt ab.</p>
+                    <div class='service-price'>ab 35,00 €</div>
+                </div>
+
+                <!-- Längen Spitzen -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=✨' alt='Spitzen auffrischen' />
+                    <h3>Längen und Spitzen aufrischen</h3>
+                    <p>Farbauffrischung für die Längen und Spitzen. Bringt müde Farben zum Strahlen und verleiht neuen Glanz.</p>
+                    <div class='service-price'>ab 20,00 €</div>
+                </div>
+
+                <!-- Ansatz Blondieren -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=☀️' alt='Ansatz Blondieren' />
+                    <h3>Ansatz Aufhellen/Blondieren</h3>
+                    <p>Schonende Blondierung des Haaransatzes mit professionellen Produkten für natürlich wirkende, helle Ergebnisse.</p>
+                    <div class='service-price'>ab 45,00 €</div>
+                </div>
+
+                <!-- Tönung -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🌈' alt='Tönung' />
+                    <h3>Tönung/Aufrischung</h3>
+                    <p>Sanfte Tönung ohne Ammoniak für glänzende Farbreflexe und Farbauffrischung. Schonend für Haar und Kopfhaut.</p>
+                    <div class='service-price'>ab 20,00 €</div>
+                </div>
+
+                <!-- Blondieren -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=💛' alt='Blondieren' />
+                    <h3>Blondieren/Aufhellen</h3>
+                    <p>Komplette Blondierung für dramatische Farbveränderungen. Von Natur bis Platinblond - wir verwirklichen Ihren Traum.</p>
+                    <div class='service-price'>ab 70,00 €</div>
+                </div>
+
+                <!-- Strähnen -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=⚡' alt='Highlights' />
+                    <h3>Strähnen (Highlights)</h3>
+                    <p>Klassische Foliensträhnen für natürliche Lichtreflexe und Dimension. Perfekt für mehr Lebendigkeit im Haar.</p>
+                    <div class='service-price'>ab 65,00 €</div>
+                </div>
+
+                <!-- Balayage -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🌟' alt='Balayage' />
+                    <h3>Balayage</h3>
+                    <p>Moderne Freihand-Färbetechnik für natürliche, sonnengeküsste Highlights. Weniger Ansatzprobleme, mehr Natürlichkeit.</p>
+                    <div class='service-price'>ab 70,00 €</div>
+                </div>
+
+                <!-- Painting -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🎭' alt='Painting' />
+                    <h3>Painting</h3>
+                    <p>Künstlerische Färbetechnik für individuelle Farbverläufe und kreative Akzente. Für alle, die das Besondere suchen.</p>
+                    <div class='service-price'>ab 70,00 €</div>
+                </div>
+
+                <!-- Ombre -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🌅' alt='Ombre' />
+                    <h3>Ombre</h3>
+                    <p>Sanfter Farbverlauf von dunkel zu hell für einen modernen, trendigen Look. Der Klassiker unter den Färbetechniken.</p>
+                    <div class='service-price'>ab 70,00 €</div>
+                </div>
+
+                <!-- Augenbrauen färben -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=👁️' alt='Augenbrauen färben' />
+                    <h3>Augenbrauen färben</h3>
+                    <p>Professionelle Augenbrauenfärbung für ausdrucksstarke Augen. Betont die natürliche Form und verleiht Intensität.</p>
+                    <div class='service-price'>13,00 €</div>
+                </div>
+
+                <!-- Wimpern färben -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=👀' alt='Wimpern färben' />
+                    <h3>Wimpern färben</h3>
+                    <p>Wimpernfärbung für natürlich betonte Augen ohne tägliches Mascara. Langanhaltend und wasserfest.</p>
+                    <div class='service-price'>10,00 €</div>
+                </div>
+
+                <!-- Augenbrauen zupfen -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🧵' alt='Augenbrauen zupfen' />
+                    <h3>Augenbrauen zupfen (Fadentechnik)</h3>
+                    <p>Präzise Augenbrauenformung mit der traditionellen Fadentechnik. Schonend und exakt für die perfekte Brauenform.</p>
+                    <div class='service-price'>5,00 €</div>
+                </div>
+
+                <!-- Kopfmassage -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=💆' alt='Kopfmassage' />
+                    <h3>Kopfmassage</h3>
+                    <p>Entspannende Kopf- und Nackenmassage zur Förderung der Durchblutung und zum Stressabbau. Pure Entspannung.</p>
+                    <div class='service-price'>5,00 €</div>
+                </div>
+
+                <!-- Gesichtsmaske -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🧴' alt='Gesichtsmaske' />
+                    <h3>Gesichtsmaske</h3>
+                    <p>Pflegende Gesichtsmaske für strahlende, gesunde Haut. Verschiedene Masken je nach Hauttyp und Bedürfnis.</p>
+                    <div class='service-price'>7,00 €</div>
                 </div>
             </div>
         </div>
@@ -957,22 +1009,22 @@
             <h2 class='section-title'>Unsere Galerie</h2>
             <div class='gallery-grid'>
                 <div class='gallery-item'>
-                    <img alt='Damenhaarschnitt Beispiel' src='https://via.placeholder.com/300x250/87CEEB/FFFFFF?text=Damen+Style'/>
+                    <img alt='Damenhaarschnitt Beispiel' src='https://via.placeholder.com/300x250/007BFF/FFFFFF?text=Damen+Style' />
                 </div>
                 <div class='gallery-item'>
-                    <img alt='Herrenhaarschnitt Beispiel' src='https://via.placeholder.com/300x250/000000/FFFFFF?text=Herren+Style'/>
+                    <img alt='Herrenhaarschnitt Beispiel' src='https://via.placeholder.com/300x250/000000/FFFFFF?text=Herren+Style' />
                 </div>
                 <div class='gallery-item'>
-                    <img alt='Kinderhaarschnitt Beispiel' src='https://via.placeholder.com/300x250/87CEEB/FFFFFF?text=Kinder+Style'/>
+                    <img alt='Kinderhaarschnitt Beispiel' src='https://via.placeholder.com/300x250/007BFF/FFFFFF?text=Kinder+Style' />
                 </div>
                 <div class='gallery-item'>
-                    <img alt='Coloration Beispiel' src='https://via.placeholder.com/300x250/000000/FFFFFF?text=Coloration'/>
+                    <img alt='Coloration Beispiel' src='https://via.placeholder.com/300x250/000000/FFFFFF?text=Coloration' />
                 </div>
                 <div class='gallery-item'>
-                    <img alt='Bartrasur Beispiel' src='https://via.placeholder.com/300x250/87CEEB/FFFFFF?text=Bartrasur'/>
+                    <img alt='Bartrasur Beispiel' src='https://via.placeholder.com/300x250/007BFF/FFFFFF?text=Bartrasur' />
                 </div>
                 <div class='gallery-item'>
-                    <img alt='Salon Innenansicht' src='https://via.placeholder.com/300x250/000000/FFFFFF?text=Salon+Innen'/>
+                    <img alt='Salon Innenansicht' src='https://via.placeholder.com/300x250/000000/FFFFFF?text=Salon+Innen' />
                 </div>
             </div>
         </div>
@@ -1019,9 +1071,9 @@
                             <b:widget-setting name='authorLabel'>von</b:widget-setting>
                             <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
                             <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-                            <b:widget-setting name='style.bordercolor'>#87ceeb</b:widget-setting>
+                            <b:widget-setting name='style.bordercolor'>#007BFF</b:widget-setting>
                             <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
-                            <b:widget-setting name='style.urlcolor'>#87ceeb</b:widget-setting>
+                            <b:widget-setting name='style.urlcolor'>#007BFF</b:widget-setting>
                             <b:widget-setting name='showAuthor'>true</b:widget-setting>
                             <b:widget-setting name='showReactions'>false</b:widget-setting>
                             <b:widget-setting name='showLabels'>true</b:widget-setting>
@@ -1030,7 +1082,7 @@
                             <b:widget-setting name='showTimestamp'>true</b:widget-setting>
                             <b:widget-setting name='postsPerAd'>5</b:widget-setting>
                             <b:widget-setting name='showBacklinks'>false</b:widget-setting>
-                            <b:widget-setting name='style.linkcolor'>#87ceeb</b:widget-setting>
+                            <b:widget-setting name='style.linkcolor'>#007BFF</b:widget-setting>
                             <b:widget-setting name='showInlineAds'>false</b:widget-setting>
                             <b:widget-setting name='showEmailPost'>false</b:widget-setting>
                         </b:widget-settings>
@@ -1039,7 +1091,7 @@
                                 <article class='blog-post'>
                                     <div class='blog-image'>
                                         <b:if cond='data:post.firstImageUrl'>
-                                            <img expr:alt='data:post.title' expr:src='data:post.firstImageUrl'/>
+                                            <img expr:alt='data:post.title' expr:src='data:post.firstImageUrl' />
                                         <b:else/>
                                             <div style='color: var(--primary-color); font-size: 3rem;'>📝</div>
                                         </b:if>
@@ -1078,8 +1130,8 @@
                     <div class='contact-item'>
                         <i>📍</i>
                         <div>
-                            <strong>Adresse:</strong><br/>
-                            Jacobspl. 7<br/>
+                            <strong>Adresse:</strong><br />
+                            Jacobspl. 7<br />
                             04808 Wurzen, Deutschland
                         </div>
                     </div>
@@ -1087,16 +1139,16 @@
                     <div class='contact-item'>
                         <i>📞</i>
                         <div>
-                            <strong>Telefon &amp; WhatsApp:</strong><br/>
-                            <a href='tel:+4917490063210'>0174 9006321</a><br/>
-                            <a href='tel:+493425826416203425'>8264162</a>
+                            <strong>Telefon &amp; WhatsApp:</strong><br />
+                            <a href='tel:+4917490063210'>0174 9006321</a><br />
+                            <a href='tel:+493425826416203425'>03425 8264162</a>
                         </div>
                     </div>
                     
                     <div class='contact-item'>
                         <i>✉️</i>
                         <div>
-                            <strong>E-Mail:</strong><br/>
+                            <strong>E-Mail:</strong><br />
                             <a href='mailto:salonmenissa@gmail.com'>salonmenissa@gmail.com</a>
                         </div>
                     </div>
@@ -1121,6 +1173,14 @@
                         </tr>
                     </table>
 
+                    <div class='business-info'>
+                        <h4>Über uns</h4>
+                        <p><strong>Gegründet:</strong> 2023 von Aras Ahmad Khatib</p>
+                        <p><strong>Herkunft:</strong> Kurdistan, Rojava</p>
+                        <p><strong>Sprachen:</strong> Wir sprechen Deutsch, Arabisch und Kurdisch</p>
+                        <p><strong>Zahlung:</strong> Barzahlung und Kartenzahlung</p>
+                    </div>
+
                     <p style='margin-top: 20px; font-style: italic;'>
                         <strong>Hinweis:</strong> Termine sind erwünscht, aber auch spontane Besuche sind möglich. 
                         Für Färbungen und Dauerwellen empfehlen wir eine telefonische Terminabsprache.
@@ -1134,7 +1194,7 @@
                 </div>
                 
                 <div class='map-container'>
-                    <iframe allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.9234567890!2d12.7416234!3d51.3684567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a6f8b123456789%3A0x987654321abcdef0!2sJacobspl.%207%2C%2004808%20Wurzen%2C%20Germany!5e0!3m2!1sen!2sde!4v1234567890123!5m2!1sen!2sde' title='SALON MENISSA Standort'></iframe>
+                    <iframe allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade' src='https://maps.app.goo.gl/DbqLvctMmZ4Tx79a6' title='SALON MENISSA Standort'></iframe>
                 </div>
             </div>
         </div>
@@ -1147,10 +1207,10 @@
             <div style='max-width: 800px; margin: 0 auto; text-align: left;'>
                 <h3>Angaben gemäß § 5 TMG</h3>
                 <p>
-                    <strong>Inhaber:</strong> ARAS AHMAD KHATIB<br/>
-                    <strong>Anschrift:</strong> Jacobsplatz 7, 04808 Wurzen, Deutschland<br/>
-                    <strong>Telefon:</strong> 0174 9006321<br/>
-                    <strong>E-Mail:</strong> salonmenissa@gmail.com<br/>
+                    <strong>Inhaber:</strong> ARAS AHMAD KHATIB<br />
+                    <strong>Anschrift:</strong> Jacobsplatz 7, 04808 Wurzen, Deutschland<br />
+                    <strong>Telefon:</strong> 0174 9006321<br />
+                    <strong>E-Mail:</strong> salonmenissa@gmail.com<br />
                 </p>
                 
                 <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
@@ -1178,7 +1238,6 @@
                 <div class='footer-section'>
                     <h3>SALON MENISSA</h3>
                     <p>Ihr vertrauensvoller Partner für professionelle Haarpflege in Wurzen seit 2023.</p>
-                    <p>Wir sprechen Deutsch, Arabisch und Kurdisch.</p>
                 </div>
                 
                 <div class='footer-section'>
@@ -1219,7 +1278,7 @@
         <div class='contact-dropdown'>
             <a href='tel:+4917490063210'>📞 0174 9006321</a>
             <a href='https://wa.me/4917490063210'>💬 WhatsApp</a>
-            <a href='tel:+493425826416203425'>📞 8264162</a>
+            <a href='tel:+493425826416203425'>📞 03425 8264162</a>
             <a href='mailto:salonmenissa@gmail.com'>✉️ E-Mail</a>
             <a href='https://www.instagram.com/salon_menissa?igsh=em96c2lpam95dzg4' target='_blank'>📷 Instagram</a>
             <a href='https://www.facebook.com/share/1EvFhEqJWG/' target='_blank'>📘 Facebook</a>
@@ -1228,7 +1287,7 @@
     </div>
 
     <!-- Back to Top Button -->
-    <a href='#top' class='back-to-top' id='backToTop'>↑</a>
+    <a href='#home' class='back-to-top' id='backToTop'>↑</a>
 
     <!-- Cookie Consent -->
     <div class='cookie-consent' id='cookieConsent'>
@@ -1245,11 +1304,6 @@
 
     <script type='text/javascript'>
     //<![CDATA[
-    // Loading Animation
-    window.addEventListener('load', function() {
-        document.getElementById('loading').style.display = 'none';
-    });
-
     // Mobile Menu Toggle
     function toggleMenu() {
         const nav = document.querySelector('.main-nav');
@@ -1302,32 +1356,15 @@
     // Initialize Cookie Consent on Page Load
     window.addEventListener('load', showCookieConsent);
 
-    // Gallery Lightbox Effect (Simple Implementation)
+    // Gallery Lightbox Effect
     document.querySelectorAll('.gallery-item img').forEach(img => {
         img.addEventListener('click', function() {
             const overlay = document.createElement('div');
-            overlay.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0,0,0,0.8);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 10000;
-                cursor: pointer;
-            `;
+            overlay.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 10000; cursor: pointer;';
             
             const enlargedImg = document.createElement('img');
             enlargedImg.src = this.src;
-            enlargedImg.style.cssText = `
-                max-width: 90%;
-                max-height: 90%;
-                border-radius: 10px;
-                box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            `;
+            enlargedImg.style.cssText = 'max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);';
             
             overlay.appendChild(enlargedImg);
             document.body.appendChild(overlay);
@@ -1335,75 +1372,6 @@
             overlay.addEventListener('click', function() {
                 document.body.removeChild(overlay);
             });
-        });
-    });
-
-    // Service Animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
-            }
-        });
-    }, observerOptions);
-
-    // Add animation styles
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .service-category,
-        .testimonial,
-        .blog-post {
-            opacity: 0;
-        }
-    `;
-    document.head.appendChild(style);
-
-    // Observe elements for animation
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.service-category, .testimonial, .blog-post').forEach(el => {
-            observer.observe(el);
-        });
-    });
-
-    // Contact Form Handling (if needed)
-    function handleContactForm() {
-        // Basic form validation and submission logic can be added here
-        // This would typically integrate with a backend service
-    }
-
-    // Performance Optimization - Lazy Loading Images
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
-                }
-            }
-        });
-    });
-
-    // Apply lazy loading to gallery images
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
         });
     });
     //]]>
