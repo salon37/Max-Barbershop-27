@@ -1,0 +1,1412 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <meta charset='utf-8'/>
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+    <title><data:view.title/></title>
+    <b:include data='blog' name='all-head-content'/>
+    
+    <!-- SEO Meta Tags -->
+    <meta content='SALON MENISSA - Professionelle Haarpflege in Wurzen für Damen, Herren und Kinder. Waschen, Schneiden, Föhnen, Färben, Dauerwelle und mehr.' name='description'/>
+    <meta content='Friseur Wurzen, Salon Menissa, Haarschnitt, Färben, Dauerwelle, Herren Friseur, Damen Friseur, Kinder Friseur, Bartrasur, Highlights, Balayage' name='keywords'/>
+    <meta content='ARAS AHMAD KHATIB' name='author'/>
+    <meta content='de-DE' name='language'/>
+    <meta content='Germany' name='geo.country'/>
+    <meta content='Wurzen' name='geo.region'/>
+    
+    <!-- Open Graph Tags -->
+    <meta content='SALON MENISSA - Ihr Friseur in Wurzen' property='og:title'/>
+    <meta content='Professionelle Haarpflege für Damen, Herren und Kinder in Wurzen. Moderne Techniken und traditionelle Friseurkunst.' property='og:description'/>
+    <meta content='website' property='og:type'/>
+    
+    <!-- Schema.org Structured Data -->
+    <script type='application/ld+json'>
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "SALON MENISSA",
+        "description": "Professionelle Haarpflege in Wurzen für Damen, Herren und Kinder",
+        "telephone": ["+49 174 9006321", "+49 3425 8264162"],
+        "email": "salonmenissa@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jacobspl. 7",
+            "addressLocality": "Wurzen",
+            "postalCode": "04808",
+            "addressCountry": "DE"
+        },
+        "openingHours": [
+            "Mo-Fr 09:00-19:00",
+            "Sa 09:00-18:00"
+        ],
+        "priceRange": "€€",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "founder": {
+            "@type": "Person",
+            "name": "Aras Ahmad Khatib"
+        },
+        "foundingDate": "2023",
+        "areaServed": "Wurzen, Germany",
+        "serviceType": [
+            "Haarschnitt",
+            "Haarwäsche",
+            "Föhnen",
+            "Färben",
+            "Dauerwelle",
+            "Bartrasur",
+            "Augenbrauen",
+            "Wimpern"
+        ]
+    }
+    </script>
+
+    <b:skin><![CDATA[
+    /* Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #ffffff;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Color Scheme - White, Black, Blue */
+    :root {
+        --primary-color: #007BFF; /* Standard Blue */
+        --secondary-color: #000000; /* Black */
+        --accent-color: #ffffff; /* White */
+        --text-color: #333333;
+        --light-gray: #f8f9fa;
+        --border-color: #e9ecef;
+    }
+
+    /* Header Styles */
+    .site-header {
+        background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-gray) 100%);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+
+    .logo span {
+        color: var(--primary-color);
+    }
+
+    /* Navigation Styles */
+    .main-nav ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+    }
+
+    .main-nav a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+    }
+
+    .main-nav a:hover {
+        color: var(--primary-color);
+    }
+
+    .main-nav a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+
+    .main-nav a:hover::after {
+        width: 100%;
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: var(--secondary-color);
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        background: linear-gradient(135deg, var(--primary-color) 0%, rgba(0, 123, 255, 0.8) 100%);
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: var(--secondary-color);
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Section Styles */
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: var(--secondary-color);
+        position: relative;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 4px;
+        background: var(--primary-color);
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* About Section */
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .about-image {
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Services Section */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .service-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        text-align: center;
+        border: 2px solid transparent;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--primary-color);
+    }
+
+    .service-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
+
+    .service-card h3 {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .service-card p {
+        color: #666;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .service-price {
+        color: var(--secondary-color);
+        font-weight: bold;
+        font-size: 1.2rem;
+        background: var(--light-gray);
+        padding: 10px 20px;
+        border-radius: 25px;
+        display: inline-block;
+    }
+
+    /* Gallery Section */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Contact Section */
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .contact-info h3 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .contact-item i {
+        color: var(--primary-color);
+        margin-right: 15px;
+        width: 25px;
+        font-size: 1.2rem;
+        margin-top: 2px;
+    }
+
+    .hours-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .hours-table th,
+    .hours-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .hours-table th {
+        background: var(--light-gray);
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .business-info {
+        background: var(--light-gray);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        border-left: 4px solid var(--primary-color);
+    }
+
+    .business-info h4 {
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+
+    /* Map Container */
+    .map-container {
+        height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    /* Footer */
+    .site-footer {
+        background: var(--secondary-color);
+        color: white;
+        padding: 50px 0 20px;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+    }
+
+    .footer-section h3 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    .footer-section a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+        color: var(--primary-color);
+    }
+
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        background: var(--primary-color);
+        color: white;
+        text-align: center;
+        line-height: 45px;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+        font-size: 1.2rem;
+    }
+
+    .social-links a:hover {
+        transform: scale(1.1);
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #444;
+    }
+
+    /* Floating Contact Button */
+    .floating-contact {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+    }
+
+    .contact-btn {
+        background: var(--primary-color);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .contact-dropdown {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        padding: 20px;
+        min-width: 280px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        transform: translateY(10px);
+    }
+
+    .floating-contact:hover .contact-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .contact-dropdown a {
+        display: block;
+        padding: 12px 0;
+        color: var(--text-color);
+        text-decoration: none;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 0.95rem;
+    }
+
+    .contact-dropdown a:last-child {
+        border-bottom: none;
+    }
+
+    .contact-dropdown a:hover {
+        color: var(--primary-color);
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--primary-color);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .back-to-top:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Cookie Consent */
+    .cookie-consent {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--secondary-color);
+        color: white;
+        padding: 20px;
+        z-index: 1001;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .cookie-consent.show {
+        transform: translateY(0);
+    }
+
+    .cookie-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .cookie-buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .cookie-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+
+    .cookie-accept {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .cookie-decline {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .testimonial {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .testimonial-text {
+        font-style: italic;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+    }
+
+    .testimonial-author {
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .testimonial-rating {
+        color: #ffd700;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+
+    /* Blog Section */
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .blog-post {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .blog-post:hover {
+        transform: translateY(-5px);
+    }
+
+    .blog-image {
+        height: 200px;
+        background: var(--light-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .blog-content {
+        padding: 20px;
+    }
+
+    .blog-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: var(--secondary-color);
+    }
+
+    .blog-excerpt {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .blog-meta {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        color: #999;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .main-nav {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: flex;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .about-content,
+        .contact-content {
+            grid-template-columns: 1fr;
+        }
+
+        .floating-contact {
+            bottom: 80px;
+        }
+
+        .contact-dropdown {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 20px 20px 0 0;
+            min-width: auto;
+        }
+
+        .cookie-content {
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Smooth Scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    ]]></b:skin>
+</head>
+<body>
+    <!-- Header -->
+    <header class='site-header'>
+        <div class='container'>
+            <div class='header-content'>
+                <a class='logo' href='/'><span>SALON</span> MENISSA</a>
+                <nav class='main-nav'>
+                    <ul>
+                        <li><a href='#home'>Home</a></li>
+                        <li><a href='#story'>Unsere Story</a></li>
+                        <li><a href='#services'>Leistungen</a></li>
+                        <li><a href='#gallery'>Galerie</a></li>
+                        <li><a href='#blog'>Blog</a></li>
+                        <li><a href='#contact'>Kontakt</a></li>
+                        <li><a href='#privacy'>Datenschutz</a></li>
+                    </ul>
+                </nav>
+                <div class='menu-toggle' onclick='toggleMenu()'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class='hero-section' id='home'>
+        <div class='container'>
+            <div class='hero-content'>
+                <h1>SALON MENISSA</h1>
+                <p>Ihr vertrauensvoller Partner für professionelle Haarpflege in Wurzen. Traditionelle Friseurkunst trifft moderne Techniken.</p>
+                <a href='#contact' class='cta-button'>Kontakt aufnehmen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class='section' id='story'>
+        <div class='container'>
+            <h2 class='section-title'>Unsere Story</h2>
+            <div class='about-content'>
+                <div class='about-text'>
+                    <p>SALON MENISSA ist Ihr vertrauensvoller Partner für professionelle Haarpflege in Wurzen. Unser Salon verbindet traditionelle Friseurkunst mit modernen Techniken und Trends.</p>
+                    
+                    <p>Wir bieten individuelle Beratung und maßgeschneiderte Lösungen für jeden Haartyp. Unser erfahrenes Team sorgt dafür, dass Sie sich bei uns rundum wohlfühlen.</p>
+                    
+                    <p>Bei uns steht der Kunde im Mittelpunkt. Wir nehmen uns die Zeit, Ihre Wünsche zu verstehen und umzusetzen, damit Sie mit einem perfekten Look unseren Salon verlassen.</p>
+                    
+                    <p>Unser Salon ist für alle Altersgruppen geeignet - wir heißen sowohl Kinder als auch Erwachsene herzlich willkommen. Termine sind erwünscht, aber auch spontane Besuche sind möglich.</p>
+                </div>
+                <div class='about-image'>
+                    <img alt='SALON MENISSA Innenansicht' src='https://via.placeholder.com/500x400/007BFF/FFFFFF?text=SALON+MENISSA' />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class='section' id='services' style='background: var(--light-gray)'>
+        <div class='container'>
+            <h2 class='section-title'>Unsere Leistungen</h2>
+            <div class='services-grid'>
+                
+                <!-- Sparpaket Herren -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=♂' alt='Herren Sparpaket' />
+                    <h3>Sparpaket Herren</h3>
+                    <p>Komplettservice für den modernen Mann: Professionelles Waschen, stilvoller Schnitt, perfektes Föhnen, traditionelle Bartrasur und finales Styling für den perfekten Look.</p>
+                    <div class='service-price'>29,00 €</div>
+                </div>
+
+                <!-- Sparpaket Damen -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=♀' alt='Damen Sparpaket' />
+                    <h3>Sparpaket Damen</h3>
+                    <p>Verwöhnprogramm für die anspruchsvolle Dame: Wimpern färben für ausdrucksstarke Augen, Augenbrauen zupfen, entspannende Kopfmassage und pflegende Gesichtsmaske.</p>
+                    <div class='service-price'>24,00 €</div>
+                </div>
+
+                <!-- Damen Waschen & Schneiden -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=✂' alt='Waschen Schneiden' />
+                    <h3>Waschen &amp; Schneiden</h3>
+                    <p>Professionelle Haarwäsche mit hochwertigen Produkten und präziser Haarschnitt, der perfekt zu Ihrem Gesicht und Stil passt.</p>
+                    <div class='service-price'>ab 22,00 €</div>
+                </div>
+
+                <!-- Damen Komplett -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=💫' alt='Komplett Service' />
+                    <h3>Waschen, Schneiden, Föhnen &amp; Styling</h3>
+                    <p>Rundum-Service für den perfekten Auftritt: Gründliche Haarwäsche, individueller Schnitt, professionelles Föhnen und stilvolles Styling.</p>
+                    <div class='service-price'>ab 32,00 €</div>
+                </div>
+
+                <!-- Dauerwelle Damen -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🌊' alt='Dauerwelle' />
+                    <h3>Dauerwelle Damen</h3>
+                    <p>Moderne Dauerwelle für langanhaltende Locken und Volumen. Mit schonenden Techniken für natürlich aussehende, gesunde Locken.</p>
+                    <div class='service-price'>ab 42,00 €</div>
+                </div>
+
+                <!-- Herren Trockenschnitt -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=⚡' alt='Trockenschnitt' />
+                    <h3>Herren Trockenhaarschnitt</h3>
+                    <p>Schneller, präziser Haarschnitt ohne Waschen. Ideal für regelmäßige Nachschnitte und wenn es mal schnell gehen muss.</p>
+                    <div class='service-price'>18,00 €</div>
+                </div>
+
+                <!-- Herren Waschen Schneiden -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🚿' alt='Herren Waschen' />
+                    <h3>Waschen, Schneiden &amp; Föhnen</h3>
+                    <p>Klassischer Herren-Service: Erfrischende Haarwäsche, präziser Schnitt und professionelles Föhnen für den gepflegten Gentleman.</p>
+                    <div class='service-price'>21,00 €</div>
+                </div>
+
+                <!-- Bartrasur -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🪒' alt='Bartrasur' />
+                    <h3>Bartrasur</h3>
+                    <p>Traditionelle Bartrasur mit heißen Tüchern und hochwertigen Rasurprodukten für die perfekte Rasur und entspannte Pflege.</p>
+                    <div class='service-price'>13,00 €</div>
+                </div>
+
+                <!-- Dauerwelle Herren -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=💇' alt='Herren Dauerwelle' />
+                    <h3>Dauerwelle Herren</h3>
+                    <p>Moderne Herren-Dauerwelle für mehr Volumen und Struktur. Perfekt für dünnes Haar oder für einen neuen, dynamischen Look.</p>
+                    <div class='service-price'>ab 29,00 €</div>
+                </div>
+
+                <!-- Kinder bis 7 Jahre -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=👶' alt='Kinder bis 7' />
+                    <h3>Haarschnitt Kinder bis 7 Jahre</h3>
+                    <p>Kinderfreundlicher Haarschnitt in entspannter Atmosphäre. Wir nehmen uns viel Zeit und Geduld für unsere kleinsten Kunden.</p>
+                    <div class='service-price'>14,00 €</div>
+                </div>
+
+                <!-- Kinder bis 12 Jahre -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🧒' alt='Kinder bis 12' />
+                    <h3>Haarschnitt Kinder bis 12 Jahre</h3>
+                    <p>Altersgerechte Haarschnitte für Kinder und Jugendliche. Von klassisch bis trendy - wir erfüllen jeden Wunsch.</p>
+                    <div class='service-price'>16,00 €</div>
+                </div>
+
+                <!-- Ansatzfarbe -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🎨' alt='Ansatzfarbe' />
+                    <h3>Ansatzfarbe</h3>
+                    <p>Professionelle Ansatzfärbung für gleichmäßige Farbe vom Ansatz bis in die Spitzen. Deckt graue Haare perfekt ab.</p>
+                    <div class='service-price'>ab 35,00 €</div>
+                </div>
+
+                <!-- Längen Spitzen -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=✨' alt='Spitzen auffrischen' />
+                    <h3>Längen und Spitzen aufrischen</h3>
+                    <p>Farbauffrischung für die Längen und Spitzen. Bringt müde Farben zum Strahlen und verleiht neuen Glanz.</p>
+                    <div class='service-price'>ab 20,00 €</div>
+                </div>
+
+                <!-- Ansatz Blondieren -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=☀️' alt='Ansatz Blondieren' />
+                    <h3>Ansatz Aufhellen/Blondieren</h3>
+                    <p>Schonende Blondierung des Haaransatzes mit professionellen Produkten für natürlich wirkende, helle Ergebnisse.</p>
+                    <div class='service-price'>ab 45,00 €</div>
+                </div>
+
+                <!-- Tönung -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🌈' alt='Tönung' />
+                    <h3>Tönung/Aufrischung</h3>
+                    <p>Sanfte Tönung ohne Ammoniak für glänzende Farbreflexe und Farbauffrischung. Schonend für Haar und Kopfhaut.</p>
+                    <div class='service-price'>ab 20,00 €</div>
+                </div>
+
+                <!-- Blondieren -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=💛' alt='Blondieren' />
+                    <h3>Blondieren/Aufhellen</h3>
+                    <p>Komplette Blondierung für dramatische Farbveränderungen. Von Natur bis Platinblond - wir verwirklichen Ihren Traum.</p>
+                    <div class='service-price'>ab 70,00 €</div>
+                </div>
+
+                <!-- Strähnen -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=⚡' alt='Highlights' />
+                    <h3>Strähnen (Highlights)</h3>
+                    <p>Klassische Foliensträhnen für natürliche Lichtreflexe und Dimension. Perfekt für mehr Lebendigkeit im Haar.</p>
+                    <div class='service-price'>ab 65,00 €</div>
+                </div>
+
+                <!-- Balayage -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🌟' alt='Balayage' />
+                    <h3>Balayage</h3>
+                    <p>Moderne Freihand-Färbetechnik für natürliche, sonnengeküsste Highlights. Weniger Ansatzprobleme, mehr Natürlichkeit.</p>
+                    <div class='service-price'>ab 70,00 €</div>
+                </div>
+
+                <!-- Painting -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🎭' alt='Painting' />
+                    <h3>Painting</h3>
+                    <p>Künstlerische Färbetechnik für individuelle Farbverläufe und kreative Akzente. Für alle, die das Besondere suchen.</p>
+                    <div class='service-price'>ab 70,00 €</div>
+                </div>
+
+                <!-- Ombre -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🌅' alt='Ombre' />
+                    <h3>Ombre</h3>
+                    <p>Sanfter Farbverlauf von dunkel zu hell für einen modernen, trendigen Look. Der Klassiker unter den Färbetechniken.</p>
+                    <div class='service-price'>ab 70,00 €</div>
+                </div>
+
+                <!-- Augenbrauen färben -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=👁️' alt='Augenbrauen färben' />
+                    <h3>Augenbrauen färben</h3>
+                    <p>Professionelle Augenbrauenfärbung für ausdrucksstarke Augen. Betont die natürliche Form und verleiht Intensität.</p>
+                    <div class='service-price'>13,00 €</div>
+                </div>
+
+                <!-- Wimpern färben -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=👀' alt='Wimpern färben' />
+                    <h3>Wimpern färben</h3>
+                    <p>Wimpernfärbung für natürlich betonte Augen ohne tägliches Mascara. Langanhaltend und wasserfest.</p>
+                    <div class='service-price'>10,00 €</div>
+                </div>
+
+                <!-- Augenbrauen zupfen -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🧵' alt='Augenbrauen zupfen' />
+                    <h3>Augenbrauen zupfen (Fadentechnik)</h3>
+                    <p>Präzise Augenbrauenformung mit der traditionellen Fadentechnik. Schonend und exakt für die perfekte Brauenform.</p>
+                    <div class='service-price'>5,00 €</div>
+                </div>
+
+                <!-- Kopfmassage -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=💆' alt='Kopfmassage' />
+                    <h3>Kopfmassage</h3>
+                    <p>Entspannende Kopf- und Nackenmassage zur Förderung der Durchblutung und zum Stressabbau. Pure Entspannung.</p>
+                    <div class='service-price'>5,00 €</div>
+                </div>
+
+                <!-- Gesichtsmaske -->
+                <div class='service-card'>
+                    <img src='https://via.placeholder.com/80x80/007BFF/FFFFFF?text=🧴' alt='Gesichtsmaske' />
+                    <h3>Gesichtsmaske</h3>
+                    <p>Pflegende Gesichtsmaske für strahlende, gesunde Haut. Verschiedene Masken je nach Hauttyp und Bedürfnis.</p>
+                    <div class='service-price'>7,00 €</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class='section' id='gallery'>
+        <div class='container'>
+            <h2 class='section-title'>Unsere Galerie</h2>
+            <div class='gallery-grid'>
+                <div class='gallery-item'>
+                    <img alt='Damenhaarschnitt Beispiel' src='https://via.placeholder.com/300x250/007BFF/FFFFFF?text=Damen+Style' />
+                </div>
+                <div class='gallery-item'>
+                    <img alt='Herrenhaarschnitt Beispiel' src='https://via.placeholder.com/300x250/000000/FFFFFF?text=Herren+Style' />
+                </div>
+                <div class='gallery-item'>
+                    <img alt='Kinderhaarschnitt Beispiel' src='https://via.placeholder.com/300x250/007BFF/FFFFFF?text=Kinder+Style' />
+                </div>
+                <div class='gallery-item'>
+                    <img alt='Coloration Beispiel' src='https://via.placeholder.com/300x250/000000/FFFFFF?text=Coloration' />
+                </div>
+                <div class='gallery-item'>
+                    <img alt='Bartrasur Beispiel' src='https://via.placeholder.com/300x250/007BFF/FFFFFF?text=Bartrasur' />
+                </div>
+                <div class='gallery-item'>
+                    <img alt='Salon Innenansicht' src='https://via.placeholder.com/300x250/000000/FFFFFF?text=Salon+Innen' />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class='section' style='background: var(--light-gray)'>
+        <div class='container'>
+            <h2 class='section-title'>Kundenbewertungen</h2>
+            <div class='testimonials-grid'>
+                <div class='testimonial'>
+                    <div class='testimonial-rating'>★★★★★</div>
+                    <p class='testimonial-text'>"Excellenter Service und sehr professionell. Ich bin mit meinem neuen Haarschnitt sehr zufrieden!"</p>
+                    <p class='testimonial-author'>- Maria S.</p>
+                </div>
+                <div class='testimonial'>
+                    <div class='testimonial-rating'>★★★★★</div>
+                    <p class='testimonial-text'>"Aras versteht sein Handwerk perfekt. Die Beratung war ausgezeichnet und das Ergebnis übertrifft meine Erwartungen."</p>
+                    <p class='testimonial-author'>- Thomas K.</p>
+                </div>
+                <div class='testimonial'>
+                    <div class='testimonial-rating'>★★★★★</div>
+                    <p class='testimonial-text'>"Sehr freundlicher Service und faire Preise. Mein Kind fühlt sich hier sehr wohl. Absolut empfehlenswert!"</p>
+                    <p class='testimonial-author'>- Anna M.</p>
+                </div>
+            </div>
+            <div style='text-align: center; margin-top: 30px;'>
+                <a href='https://g.page/r/CbVOvVmvEkOREAE/review' target='_blank' class='cta-button'>Bewertung schreiben</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class='section' id='blog'>
+        <div class='container'>
+            <h2 class='section-title'>Unser Blog</h2>
+            <div class='blog-grid'>
+                <b:section class='blog-posts' id='blog-posts' maxwidgets='3' showaddelement='false'>
+                    <b:widget id='Blog1' locked='true' title='Blog-Posts' type='Blog' version='2' visible='true'>
+                        <b:widget-settings>
+                            <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                            <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+                            <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                            <b:widget-setting name='authorLabel'>von</b:widget-setting>
+                            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                            <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+                            <b:widget-setting name='style.bordercolor'>#007BFF</b:widget-setting>
+                            <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                            <b:widget-setting name='style.urlcolor'>#007BFF</b:widget-setting>
+                            <b:widget-setting name='showAuthor'>true</b:widget-setting>
+                            <b:widget-setting name='showReactions'>false</b:widget-setting>
+                            <b:widget-setting name='showLabels'>true</b:widget-setting>
+                            <b:widget-setting name='showLocation'>false</b:widget-setting>
+                            <b:widget-setting name='postLabelsLabel'>Labels:</b:widget-setting>
+                            <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+                            <b:widget-setting name='postsPerAd'>5</b:widget-setting>
+                            <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+                            <b:widget-setting name='style.linkcolor'>#007BFF</b:widget-setting>
+                            <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                            <b:widget-setting name='showEmailPost'>false</b:widget-setting>
+                        </b:widget-settings>
+                        <b:includable id='main' var='this'>
+                            <b:loop values='data:posts' var='post'>
+                                <article class='blog-post'>
+                                    <div class='blog-image'>
+                                        <b:if cond='data:post.firstImageUrl'>
+                                            <img expr:alt='data:post.title' expr:src='data:post.firstImageUrl' />
+                                        <b:else/>
+                                            <div style='color: var(--primary-color); font-size: 3rem;'>📝</div>
+                                        </b:if>
+                                    </div>
+                                    <div class='blog-content'>
+                                        <h3 class='blog-title'>
+                                            <a expr:href='data:post.url'><data:post.title/></a>
+                                        </h3>
+                                        <p class='blog-excerpt'>
+                                            <data:post.snippet/>
+                                        </p>
+                                        <div class='blog-meta'>
+                                            <data:post.dateHeader/> von <data:post.author/>
+                                        </div>
+                                    </div>
+                                </article>
+                            </b:loop>
+                        </b:includable>
+                    </b:widget>
+                </b:section>
+            </div>
+            <div style='text-align: center; margin-top: 30px;'>
+                <a href='/search/label/Tipps' class='cta-button'>Alle Beiträge ansehen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class='section' id='contact' style='background: var(--light-gray)'>
+        <div class='container'>
+            <h2 class='section-title'>Kontakt</h2>
+            <div class='contact-content'>
+                <div class='contact-info'>
+                    <h3>Kontaktinformationen</h3>
+                    
+                    <div class='contact-item'>
+                        <i>📍</i>
+                        <div>
+                            <strong>Adresse:</strong><br />
+                            Jacobspl. 7<br />
+                            04808 Wurzen, Deutschland
+                        </div>
+                    </div>
+                    
+                    <div class='contact-item'>
+                        <i>📞</i>
+                        <div>
+                            <strong>Telefon &amp; WhatsApp:</strong><br />
+                            <a href='tel:+4917490063210'>0174 9006321</a><br />
+                            <a href='tel:+493425826416203425'>03425 8264162</a>
+                        </div>
+                    </div>
+                    
+                    <div class='contact-item'>
+                        <i>✉️</i>
+                        <div>
+                            <strong>E-Mail:</strong><br />
+                            <a href='mailto:salonmenissa@gmail.com'>salonmenissa@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <h3 style='margin-top: 30px;'>Öffnungszeiten</h3>
+                    <table class='hours-table'>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Öffnungszeiten</th>
+                        </tr>
+                        <tr>
+                            <td>Montag - Freitag</td>
+                            <td>09:00 - 19:00 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Samstag</td>
+                            <td>09:00 - 18:00 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Sonntag</td>
+                            <td>Geschlossen</td>
+                        </tr>
+                    </table>
+
+                    <div class='business-info'>
+                        <h4>Über uns</h4>
+                        <p><strong>Gegründet:</strong> 2023 von Aras Ahmad Khatib</p>
+                        <p><strong>Herkunft:</strong> Kurdistan, Rojava</p>
+                        <p><strong>Sprachen:</strong> Wir sprechen Deutsch, Arabisch und Kurdisch</p>
+                        <p><strong>Zahlung:</strong> Barzahlung und Kartenzahlung</p>
+                    </div>
+
+                    <p style='margin-top: 20px; font-style: italic;'>
+                        <strong>Hinweis:</strong> Termine sind erwünscht, aber auch spontane Besuche sind möglich. 
+                        Für Färbungen und Dauerwellen empfehlen wir eine telefonische Terminabsprache.
+                    </p>
+
+                    <div class='social-links'>
+                        <a href='https://www.instagram.com/salon_menissa?igsh=em96c2lpam95dzg4' target='_blank' title='Instagram'>📷</a>
+                        <a href='https://www.facebook.com/share/1EvFhEqJWG/' target='_blank' title='Facebook'>📘</a>
+                        <a href='https://SalonMenissa.bio.link' target='_blank' title='Bio Link'>🔗</a>
+                    </div>
+                </div>
+                
+                <div class='map-container'>
+                    <iframe allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade' src='https://maps.app.goo.gl/DbqLvctMmZ4Tx79a6' title='SALON MENISSA Standort'></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy/Datenschutz Section -->
+    <section class='section' id='privacy'>
+        <div class='container'>
+            <h2 class='section-title'>Datenschutzerklärung &amp; Impressum</h2>
+            <div style='max-width: 800px; margin: 0 auto; text-align: left;'>
+                <h3>Angaben gemäß § 5 TMG</h3>
+                <p>
+                    <strong>Inhaber:</strong> ARAS AHMAD KHATIB<br />
+                    <strong>Anschrift:</strong> Jacobsplatz 7, 04808 Wurzen, Deutschland<br />
+                    <strong>Telefon:</strong> 0174 9006321<br />
+                    <strong>E-Mail:</strong> salonmenissa@gmail.com<br />
+                </p>
+                
+                <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+                <p>ARAS AHMAD KHATIB, gleiche Anschrift</p>
+                
+                <h3>Datenschutz</h3>
+                <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie darüber, wie SALON MENISSA mit Ihren Daten umgeht.</p>
+                
+                <h4>Datenerfassung</h4>
+                <p>Wir erfassen personenbezogene Daten nur, wenn Sie uns diese freiwillig mitteilen, z.B. bei einer Kontaktanfrage. Diese Daten verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und geben sie nicht an Dritte weiter.</p>
+                
+                <h4>Cookies</h4>
+                <p>Unsere Website verwendet Cookies, um Ihnen ein besseres Nutzererlebnis zu bieten. Sie können Ihren Browser so einstellen, dass er Cookies blockiert oder über deren Verwendung informiert.</p>
+                
+                <h4>Ihre Rechte</h4>
+                <p>Sie haben das Recht auf Auskunft über Ihre gespeicherten Daten, Berichtigung, Löschung oder Einschränkung der Verarbeitung. Wenden Sie sich dazu jederzeit an uns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class='site-footer'>
+        <div class='container'>
+            <div class='footer-content'>
+                <div class='footer-section'>
+                    <h3>SALON MENISSA</h3>
+                    <p>Ihr vertrauensvoller Partner für professionelle Haarpflege in Wurzen seit 2023.</p>
+                </div>
+                
+                <div class='footer-section'>
+                    <h3>Kontakt</h3>
+                    <p>Jacobspl. 7, 04808 Wurzen</p>
+                    <p>Tel: 0174 9006321</p>
+                    <p>E-Mail: salonmenissa@gmail.com</p>
+                </div>
+                
+                <div class='footer-section'>
+                    <h3>Öffnungszeiten</h3>
+                    <p>Mo - Fr: 09:00 - 19:00 Uhr</p>
+                    <p>Sa: 09:00 - 18:00 Uhr</p>
+                    <p>So: Geschlossen</p>
+                </div>
+                
+                <div class='footer-section'>
+                    <h3>Folgen Sie uns</h3>
+                    <div class='social-links'>
+                        <a href='https://www.instagram.com/salon_menissa?igsh=em96c2lpam95dzg4' target='_blank' title='Instagram'>📷</a>
+                        <a href='https://www.facebook.com/share/1EvFhEqJWG/' target='_blank' title='Facebook'>📘</a>
+                        <a href='https://SalonMenissa.bio.link' target='_blank' title='Bio Link'>🔗</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class='footer-bottom'>
+                <p>&copy; 2024 SALON MENISSA. Alle Rechte vorbehalten. | <a href='#privacy'>Datenschutz</a> | <a href='#privacy'>Impressum</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <div class='floating-contact'>
+        <a href='#' class='contact-btn'>
+            <span>📞</span> Kontakt
+        </a>
+        <div class='contact-dropdown'>
+            <a href='tel:+4917490063210'>📞 0174 9006321</a>
+            <a href='https://wa.me/4917490063210'>💬 WhatsApp</a>
+            <a href='tel:+493425826416203425'>📞 03425 8264162</a>
+            <a href='mailto:salonmenissa@gmail.com'>✉️ E-Mail</a>
+            <a href='https://www.instagram.com/salon_menissa?igsh=em96c2lpam95dzg4' target='_blank'>📷 Instagram</a>
+            <a href='https://www.facebook.com/share/1EvFhEqJWG/' target='_blank'>📘 Facebook</a>
+            <a href='https://SalonMenissa.bio.link' target='_blank'>🔗 Bio.Link</a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href='#home' class='back-to-top' id='backToTop'>↑</a>
+
+    <!-- Cookie Consent -->
+    <div class='cookie-consent' id='cookieConsent'>
+        <div class='cookie-content'>
+            <div>
+                <p>Diese Website verwendet Cookies, um Ihnen die bestmögliche Erfahrung zu bieten. Durch die weitere Nutzung stimmen Sie der Verwendung von Cookies zu.</p>
+            </div>
+            <div class='cookie-buttons'>
+                <button class='cookie-btn cookie-accept' onclick='acceptCookies()'>Akzeptieren</button>
+                <button class='cookie-btn cookie-decline' onclick='declineCookies()'>Ablehnen</button>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+    //<![CDATA[
+    // Mobile Menu Toggle
+    function toggleMenu() {
+        const nav = document.querySelector('.main-nav');
+        nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Back to Top Button
+    window.addEventListener('scroll', function() {
+        const backToTop = document.getElementById('backToTop');
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Cookie Consent
+    function showCookieConsent() {
+        if (!localStorage.getItem('cookieConsent')) {
+            setTimeout(() => {
+                document.getElementById('cookieConsent').classList.add('show');
+            }, 2000);
+        }
+    }
+
+    function acceptCookies() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        document.getElementById('cookieConsent').classList.remove('show');
+    }
+
+    function declineCookies() {
+        localStorage.setItem('cookieConsent', 'declined');
+        document.getElementById('cookieConsent').classList.remove('show');
+    }
+
+    // Initialize Cookie Consent on Page Load
+    window.addEventListener('load', showCookieConsent);
+
+    // Gallery Lightbox Effect
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', function() {
+            const overlay = document.createElement('div');
+            overlay.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 10000; cursor: pointer;';
+            
+            const enlargedImg = document.createElement('img');
+            enlargedImg.src = this.src;
+            enlargedImg.style.cssText = 'max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);';
+            
+            overlay.appendChild(enlargedImg);
+            document.body.appendChild(overlay);
+            
+            overlay.addEventListener('click', function() {
+                document.body.removeChild(overlay);
+            });
+        });
+    });
+    //]]>
+    </script>
+
+    <!-- Additional Blogger Widgets -->
+    <b:section class='sidebar' id='sidebar' showaddelement='false' maxwidgets=''>
+        <!-- Popular Posts Widget -->
+        <b:widget id='PopularPosts1' locked='false' title='Beliebte Beiträge' type='PopularPosts' version='2' visible='false'>
+            <b:widget-settings>
+                <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
+                <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+                <b:widget-setting name='showSnippets'>true</b:widget-setting>
+                <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+            </b:widget-settings>
+        </b:widget>
+        
+        <!-- Archive Widget -->
+        <b:widget id='BlogArchive1' locked='false' title='Archiv' type='BlogArchive' version='2' visible='false'>
+            <b:widget-settings>
+                <b:widget-setting name='showPostCount'>true</b:widget-setting>
+                <b:widget-setting name='style'>MENU</b:widget-setting>
+            </b:widget-settings>
+        </b:widget>
+        
+        <!-- Labels Widget -->
+        <b:widget id='Label1' locked='false' title='Kategorien' type='Label' version='2' visible='false'>
+            <b:widget-settings>
+                <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+                <b:widget-setting name='display'>LIST</b:widget-setting>
+                <b:widget-setting name='showType'>ALL</b:widget-setting>
+                <b:widget-setting name='showFreq'>true</b:widget-setting>
+            </b:widget-settings>
+        </b:widget>
+    </b:section>
+
+</body>
+</html>
